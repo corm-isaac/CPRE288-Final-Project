@@ -1,0 +1,38 @@
+/*
+ * logMessage.c
+ *
+ *  Created on: Apr 10, 2026
+ *      Author: ikcorm
+ */
+
+#include "Timer.h"
+#include "lcd.h"
+#include "uart-interrupt.h"
+#include <stdbool.h>
+#include "driverlib/interrupt.h"
+
+void logMessage(size_t bufSize, const char *fmt, ...)
+{
+
+    char buffer[bufSize];
+
+    va_list args;
+    va_start(args, fmt);
+
+    vsnprintf(buffer, bufSize, fmt, args);
+
+    va_end(args);
+
+    // Output to LCD
+    //lcd_clear();
+    //lcd_printf("%s", buffer);
+
+    // Output to UART
+    uart_sendStr(buffer);
+}
+
+void logMessage_init(){
+    timer_init(); // Must be called before lcd_init(), which uses timer functions
+    lcd_init();
+}
+

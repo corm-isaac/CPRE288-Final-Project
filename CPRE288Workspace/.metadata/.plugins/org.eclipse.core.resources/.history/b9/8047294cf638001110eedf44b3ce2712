@@ -1,0 +1,74 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../adc.c \
+../button.c \
+../lcd.c \
+../logMessage.c \
+../main.c \
+../ping.c \
+../servo.c \
+../uart-interrupt.c \
+../utility.c 
+
+C_DEPS += \
+./adc.d \
+./button.d \
+./lcd.d \
+./logMessage.d \
+./main.d \
+./ping.d \
+./servo.d \
+./uart-interrupt.d \
+./utility.d 
+
+OBJS += \
+./adc.obj \
+./button.obj \
+./lcd.obj \
+./logMessage.obj \
+./main.obj \
+./ping.obj \
+./servo.obj \
+./uart-interrupt.obj \
+./utility.obj 
+
+OBJS__QUOTED += \
+"adc.obj" \
+"button.obj" \
+"lcd.obj" \
+"logMessage.obj" \
+"main.obj" \
+"ping.obj" \
+"servo.obj" \
+"uart-interrupt.obj" \
+"utility.obj" 
+
+C_DEPS__QUOTED += \
+"adc.d" \
+"button.d" \
+"lcd.d" \
+"logMessage.d" \
+"main.d" \
+"ping.d" \
+"servo.d" \
+"uart-interrupt.d" \
+"utility.d" 
+
+C_SRCS__QUOTED += \
+"../adc.c" \
+"../button.c" \
+"../lcd.c" \
+"../logMessage.c" \
+"../main.c" \
+"../ping.c" \
+"../servo.c" \
+"../uart-interrupt.c" \
+"../utility.c" 
+
+

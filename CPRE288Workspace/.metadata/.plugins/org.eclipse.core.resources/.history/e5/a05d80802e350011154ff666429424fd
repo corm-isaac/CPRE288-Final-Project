@@ -1,0 +1,28 @@
+/*
+ * servo.h
+ *
+ *  Created on: Apr 8, 2026
+ *      Author: ikcorm
+ */
+
+#ifndef SERVO_H_
+#define SERVO_H_
+
+#include <stdio.h>
+#include <stdint.h>
+#include <string.h>
+#include <inc/tm4c123gh6pm.h>
+#include "Timer.h"
+
+#include <stdbool.h>
+#include "driverlib/interrupt.h"
+
+
+void servo_init(void);
+
+void logMessage(size_t bufSize, const char *fmt, ...);
+
+void servo_move(uint16_t degrees);
+
+
+#endif /* SERVO_H_ */

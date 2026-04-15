@@ -1,0 +1,101 @@
+/**
+ * lab5_template.c
+ *
+ * Template file for CprE 288 Lab 5
+ *
+ * @author Zhao Zhang, Chad Nelson, Zachary Glanz
+ * @date 08/14/2016
+ *
+ * @author Phillip Jones, updated 6/4/2019
+ * @author Diane Rover, updated 2/25/2021, 2/17/2022
+ */
+
+#include "Timer.h"
+#include "lcd.h"
+
+#include "uart-interrupt.h"
+#include <stdbool.h>
+#include "utility.h"
+#include "open_interface.h"
+#include "movement.h"
+#include "adc.h"
+#include "ping.h"
+#include "button.h"
+#include "servo.h"
+
+//volatile char command_byte;
+//volatile int command_flag;
+extern volatile uint32_t timer_val_start;
+extern volatile uint32_t timer_val_end;
+extern int overflows;
+extern volatile enum{LOW, HIGH, DONE} timer_state; // State of ping echo pulse
+
+// Uncomment or add any include directives that you want to use
+// #include "open_interface.h"
+// #include "movement.h"
+// #include "button.h"
+
+// Your code can use the global variables defined in uart-interrupt.c
+// They are declared with the extern qualifier in uart-interrupt.h, which makes the variables visible to this file.
+
+
+
+int main(void)
+{
+    timer_init(); // Must be called before lcd_init(), which uses timer functions
+    lcd_init();
+    lcd_printf("not working");
+    uart_interrupt_init();
+    ping_init();
+    adc_init();
+    button_init();
+    servo_init();
+
+    // init servo, lcd, button, and timer before calling
+    //servo_calibrate();
+
+    servo_move(90);
+    timer_waitMillis(750);
+    servo_move(30);
+        timer_waitMillis(750);
+        servo_move(150);
+            timer_waitMillis(750);
+            servo_move(90);
+                timer_waitMillis(750);
+
+
+    //oi_t *sensor_data = oi_alloc(); // do this only once at start of main()
+    //oi_init(sensor_data); // do this only once at start of main()
+
+    //cyBOT_SERVRO_cal_t calib = cyBOT_SERVO_cal();
+
+
+
+
+
+    //right_calibration_value = 358750; //13:274750  23:285250  24:248500  2:238000  10:358750
+    //left_calibration_value = 1382500; //13:1382500 23:1240750 24:1230250 2:1225000 10:1382500
+
+    //lcd_printf("test");
+    /*
+    uint32_t cycles;
+    float distance;
+    uint16_t raw_ir;
+    float ir;
+    while(1)
+    {
+        timer_waitMillis(500);
+        ping_trigger();
+        while(timer_state != DONE){}; //?
+        cycles = get_cycles();
+        distance = ping_getDistance(cycles);
+        GPIO_PORTB_DATA_R |= 0x04;
+        raw_ir = adc_read();
+        GPIO_PORTB_DATA_R |= 0x04;
+        ir = get_distance(raw_ir);
+        //timer_state = LOW;
+        lcd_printf("ping: %f\nIR: %f", distance, ir);
+    }
+    */
+
+}
