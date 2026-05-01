@@ -11,6 +11,7 @@
 #include "lcd.h"
 #include "open_interface.h"
 #include "movement.h"
+#include "boundary.h"
 
 int main (void) {
     oi_t *sensor_data = oi_alloc();
@@ -18,21 +19,11 @@ int main (void) {
     lcd_init();   // Initialize the LCD screen.  This also clears the screen.
     timer_init();
 
-    // move 1 meter forward
-    //move_forward(sensor_data, 1000);
-
-    /*
-    move_forward(sensor_data, 500);
-    turn_right(sensor_data, 90);
-    move_forward(sensor_data, 500);
-    turn_right(sensor_data, 90);
-    move_forward(sensor_data, 500);
-    turn_right(sensor_data, 90);
-    move_forward(sensor_data, 500);
-    */
-    move_forward(sensor_data,2000);
-    //double distance = move_forward(sensor_data, 2000);
-    //lcd_printf("Distance: %f", distance);
+    //MAIN BOUNDARY TEST
+    while(1){
+        int ret = checkBoundary(sensor_data);
+        lcd_printf(ret);
+    }
 
     oi_free(sensor_data);
 }

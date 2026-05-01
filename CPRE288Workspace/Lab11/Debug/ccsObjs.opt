@@ -1,5 +1,6 @@
 "./Timer.obj"
 "./adc.obj"
+"./boundary.obj"
 "./button.obj"
 "./lcd.obj"
 "./logMessage.obj"

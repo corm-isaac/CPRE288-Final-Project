@@ -7,6 +7,9 @@
 * @date 02/04/2026
 */
 #include "movement.h"
+#include "boundary.h"
+#include "logMessage.h"
+
 
 
 /**
@@ -17,36 +20,45 @@
 * @param double_distance_mm The real-world distance to travel
 * @date 02/04/2026
 */
-double move_forward(oi_t *sensor_data, double distance_mm, int* bump_return) {
-
-    oi_setWheels(100,100); //Medium speed, accuracy tbd
-
+double move_forward(oi_t *sensor_data, double distance_mm) {
     double sum = 0;
 
-    double LINEAR_ADJUSTMENT = 1.0; //if mm readings are inaccurate. Will need conceptual revision. Should be in header file
+        if (distance_mm > 0) {
+            oi_setWheels (150,150);
 
-    while(sum < distance_mm * LINEAR_ADJUSTMENT) {
+            while (sum < distance_mm){
+                oi_update(sensor_data);
+                sum += (*sensor_data).distance;
 
-        oi_update(sensor_data);
+                if ((*sensor_data).bumpLeft){
+                    sum -= 150;
+                    bumpLeft(sensor_data);
+                    oi_setWheels(150, 150);
+                } else if ((*sensor_data).bumpRight){
+                    sum -= 150;
+                    bumpRight(sensor_data);
+                    oi_setWheels(150, 150);
+                }
+                int x = checkBoundary(sensor_data);
 
-        sum += sensor_data->distance;
+                if(x)){
+                    oops(sensor_data, x);
+                    logMessage(40, "sensor tripped: %d\r\n", x);
+                }
+                //char string_sum[] = (char)sum;
+                //lcd_printf("%lf", sum);
+            }
+        } else {
+            oi_setWheels(-150, -150);
 
-        if(sensor_data->bumpLeft) { //deadzone 25
-            //Stop, we have bumped
-            *bump_return = -1;
-            break;
-        } else if(sensor_data->bumpRight) { //deadzone 25
-            //Stop, we have bumped
-            *bump_return = 1;
-            break;
+            while (sum > distance_mm) {
+                oi_update(sensor_data);
+                sum += (*sensor_data).distance;
+            }
         }
 
-    }
-
-    oi_setWheels(0,0); //Stop
-
-    return sum * LINEAR_ADJUSTMENT; //Actual distance traveled
-
+        oi_setWheels(0,0);
+        return sum;
 }
 
 double move_backward(oi_t *sensor_data, double distance_mm) {
@@ -115,24 +127,45 @@ double turn_left(oi_t *sensor_data, double degrees)
 }
 
 
-void go_around(oi_t *sensor_data, short direction) {
-    move_backward(sensor_data, 150); //Move back 15cm
-    int dummy = 0; //Not used
-    int* dummy_ptr = &dummy;
+void bumpLeft(oi_t *sensor_data) {
 
-
-    if(direction == 1) { //Right
-        turn_right(sensor_data, 90);
-        move_forward(sensor_data, 150, dummy_ptr);
-        turn_left(sensor_data, 90);
-//        move_forward(sensor_data, 400, dummy_ptr);
-//       turn_left(sensor_data, 90);
-//        move_forward(sensor_data, 150, dummy_ptr);
-//       turn_right(sensor_data, 90);
-    } else {
-        turn_left(sensor_data, 90);
-        move_forward(sensor_data, 150, dummy_ptr);
-        turn_right(sensor_data, 90);
-    }
-
+    move_forward(sensor_data, -150);
+    turn_right(sensor_data, 90);
+    move_forward(sensor_data, 250);
+    turn_left(sensor_data, 90);
+    move_forward(sensor_data, 150);
 }
+
+void bumpRight(oi_t *sensor_data) {
+
+    move_forward(sensor_data, -150);
+    turn_left(sensor_data, 90);
+    move_forward(sensor_data, 250);
+    turn_right(sensor_data, 90);
+    move_forward(sensor_data, 150);
+}
+
+
+
+
+void oops(oi_t *sensor_data, int sensor_tripped){
+
+    move_backward(sensor_data, 100); //Move back 15cm
+
+    switch(sensor_tripped){
+    case 1: //FRONT LEFT
+        turn_right(sensor_data, 45);
+        break;
+    case 2: //LEFT
+        turn_right(sensor_data, 65);
+        break;
+    case 3: //FRONT RIGHT
+        turn_left(sensor_data, 45);
+        break;
+    case 4: //RIGHT
+        turn_left(sensor_data, 65);
+        break;
+    }
+}
+
+

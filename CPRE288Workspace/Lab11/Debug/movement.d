@@ -26,6 +26,8 @@ movement.obj: C:/ti/TivaWare_C_Series-2.2.0.295/inc/tm4c123gh6pm.h
 movement.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdbool.h
 movement.obj: C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/interrupt.h
 movement.obj: ../lcd.h
+movement.obj: ../boundary.h
+movement.obj: ../logMessage.h
 
 ../movement.c:
 
@@ -78,4 +80,8 @@ C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdbool.h:
 C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/interrupt.h:
 
 ../lcd.h:
+
+../boundary.h:
+
+../logMessage.h:
 
