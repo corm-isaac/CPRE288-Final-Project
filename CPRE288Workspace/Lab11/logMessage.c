@@ -10,6 +10,7 @@
 #include "uart-interrupt.h"
 #include <stdbool.h>
 #include "driverlib/interrupt.h"
+#include "manual.h"
 
 void logMessage(size_t bufSize, const char *fmt, ...)
 {
@@ -35,4 +36,6 @@ void logMessage_init(){
     timer_init(); // Must be called before lcd_init(), which uses timer functions
     lcd_init();
 }
+
+
 

@@ -28,6 +28,8 @@ movement.obj: C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/interrupt.h
 movement.obj: ../lcd.h
 movement.obj: ../boundary.h
 movement.obj: ../logMessage.h
+movement.obj: ../utility.h
+movement.obj: ../uart-interrupt.h
 
 ../movement.c:
 
@@ -84,4 +86,8 @@ C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/interrupt.h:
 ../boundary.h:
 
 ../logMessage.h:
+
+../utility.h:
+
+../uart-interrupt.h:
 

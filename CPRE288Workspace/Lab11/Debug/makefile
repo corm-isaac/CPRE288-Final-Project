@@ -17,6 +17,7 @@ ORDERED_OBJS += \
 "./lcd.obj" \
 "./logMessage.obj" \
 "./main.obj" \
+"./manual.obj" \
 "./movement.obj" \
 "./open_interface.obj" \
 "./ping.obj" \
@@ -155,8 +156,8 @@ Lab11.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "Timer.obj" "adc.obj" "boundary.obj" "button.obj" "lcd.obj" "logMessage.obj" "main.obj" "movement.obj" "open_interface.obj" "ping.obj" "servo.obj" "tm4c1231h6pm_startup_ccs.obj" "uart-interrupt.obj" "utility.obj" 
-	-$(RM) "Timer.d" "adc.d" "boundary.d" "button.d" "lcd.d" "logMessage.d" "main.d" "movement.d" "open_interface.d" "ping.d" "servo.d" "tm4c1231h6pm_startup_ccs.d" "uart-interrupt.d" "utility.d" 
+	-$(RM) "Timer.obj" "adc.obj" "boundary.obj" "button.obj" "lcd.obj" "logMessage.obj" "main.obj" "manual.obj" "movement.obj" "open_interface.obj" "ping.obj" "servo.obj" "tm4c1231h6pm_startup_ccs.obj" "uart-interrupt.obj" "utility.obj" 
+	-$(RM) "Timer.d" "adc.d" "boundary.d" "button.d" "lcd.d" "logMessage.d" "main.d" "manual.d" "movement.d" "open_interface.d" "ping.d" "servo.d" "tm4c1231h6pm_startup_ccs.d" "uart-interrupt.d" "utility.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

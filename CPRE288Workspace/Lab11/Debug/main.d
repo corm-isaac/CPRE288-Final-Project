@@ -34,6 +34,7 @@ main.obj: ../button.h
 main.obj: ../servo.h
 main.obj: ../logMessage.h
 main.obj: ../boundary.h
+main.obj: ../manual.h
 
 ../main.c:
 
@@ -102,4 +103,6 @@ C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h:
 ../logMessage.h:
 
 ../boundary.h:
+
+../manual.h:
 

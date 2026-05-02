@@ -9,8 +9,7 @@
 #include "movement.h"
 #include "boundary.h"
 #include "logMessage.h"
-
-
+#include "utility.h"
 
 /**
 * Moves the robot forward, using the encoders as feedback. Adjusts encoder mm to real mm using constant.
@@ -24,32 +23,36 @@ double move_forward(oi_t *sensor_data, double distance_mm) {
     double sum = 0;
 
         if (distance_mm > 0) {
-            oi_setWheels (150,150);
+            oi_setWheels (75,75);
 
             while (sum < distance_mm){
                 oi_update(sensor_data);
                 sum += (*sensor_data).distance;
 
                 if ((*sensor_data).bumpLeft){
-                    sum -= 150;
+                    sum -= 75;
                     bumpLeft(sensor_data);
-                    oi_setWheels(150, 150);
+                    oi_setWheels(75, 75);
                 } else if ((*sensor_data).bumpRight){
-                    sum -= 150;
+                    sum -= 75;
                     bumpRight(sensor_data);
-                    oi_setWheels(150, 150);
+                    oi_setWheels(75, 75);
                 }
-                int x = checkBoundary(sensor_data);
 
-                if(x)){
-                    oops(sensor_data, x);
-                    logMessage(40, "sensor tripped: %d\r\n", x);
+                /*BOUNDARY CHECK*/
+                int sensor = checkBoundary(sensor_data);
+                if(sensor){ //returns truthy value
+                    logMessage(40, "Break -> Sensor Tripped: %d\r\n", sensor);
+                   STOP_BYTE = 1;
                 }
-                //char string_sum[] = (char)sum;
-                //lcd_printf("%lf", sum);
+
+                if(STOP_BYTE) {
+                      STOP_BYTE = 0;
+                      break;
+                }
             }
         } else {
-            oi_setWheels(-150, -150);
+            oi_setWheels(-75, -75);
 
             while (sum > distance_mm) {
                 oi_update(sensor_data);

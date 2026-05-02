@@ -22,6 +22,11 @@ servo.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocal
 servo.obj: ../Timer.h
 servo.obj: C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/interrupt.h
 servo.obj: ../button.h
+servo.obj: ../adc.h
+servo.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/math.h
+servo.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_defs.h
+servo.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_limits.h
+servo.obj: ../ping.h
 
 ../servo.c:
 
@@ -66,4 +71,14 @@ C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h
 C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/interrupt.h:
 
 ../button.h:
+
+../adc.h:
+
+C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/math.h:
+
+C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_defs.h:
+
+C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_limits.h:
+
+../ping.h:
 
