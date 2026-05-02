@@ -5,6 +5,9 @@
  *      Author: cooperrs
  */
 #include "servo.h"
+#include "adc.h"
+#include "ping.h"
+
 
 void servo_init(void)
 {
@@ -154,6 +157,20 @@ void servo_calibrate(void)
             lcd_printf("counter clockwise\ncurrent: %d\ndegrees: %d", timer_match, servo_pos);
         }
     }
+
+}
+
+uint16_t IRScan(float degrees){
+    servo_move(degrees);
+    return get_distance(adc_read());
+    //return adc_read();
+}
+
+float PingScan(int degrees){
+    servo_move(degrees);
+    ping_trigger();
+
+    return ping_getDistance(get_cycles());
 
 }
 

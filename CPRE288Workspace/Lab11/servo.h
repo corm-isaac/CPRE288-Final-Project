@@ -23,5 +23,8 @@ void servo_move(float degrees);
 // init lcd, button, and timer before calling
 void servo_calibrate(void);
 
+uint16_t IRScan(float degrees);
+
+float PingScan(int degree);
 
 #endif /* SERVO_H_ */

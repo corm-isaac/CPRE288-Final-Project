@@ -15,7 +15,7 @@
 #define COUNT 91
 #define EDGE_SCALE 1.3
 
-
+extern char STOP_BYTE;
 typedef struct {
     int start_angle;
     int end_angle;

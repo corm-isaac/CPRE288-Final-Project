@@ -16155,3 +16155,1730 @@ gmake[1]: 'Lab11.out' is up to date.
 gmake[1]: 'Lab11.out' is up to date.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"../movement.c", line 44: error #29: expected an expression
+"../movement.c", line 50: warning #12-D: parsing restarts here after previous syntax error
+"../movement.c", line 50: error #66: expected a ";"
+2 errors detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+Finished building: "../manual.c"
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual.obj' failed
+"../manual.c", line 11: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual.c", line 20: error #20: identifier "command_byte" is undefined
+"../manual.c", line 23: error #20: identifier "command_flag" is undefined
+"../manual.c", line 26: warning #225-D: function "move_forward" declared implicitly
+"../manual.c", line 26: error #20: identifier "sensor_data" is undefined
+"../manual.c", line 27: warning #225-D: function "logMessage" declared implicitly
+"../manual.c", line 31: warning #225-D: function "turn_left" declared implicitly
+"../manual.c", line 37: warning #225-D: function "move_backward" declared implicitly
+"../manual.c", line 42: warning #225-D: function "turn_right" declared implicitly
+3 errors detected in the compilation of "../manual.c".
+gmake: *** [manual.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual.obj' failed
+"../manual.c", line 42: error #20: identifier "sensor_data" is undefined
+1 error detected in the compilation of "../manual.c".
+gmake: *** [manual.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+Finished building: "../manual.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 46: error #256: type name is not allowed
+"../main.c", line 46: error #32: expression must have arithmetic type
+2 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../boundary.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="boundary.d_raw"  "../boundary.c"
+Finished building: "../boundary.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../boundary.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="boundary.d_raw"  "../boundary.c"
+Finished building: "../boundary.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+Finished building: "../manual.c"
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../boundary.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="boundary.d_raw"  "../boundary.c"
+Finished building: "../boundary.c"
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 46: warning #225-D: function "drive" declared implicitly
+Finished building: "../main.c"
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+Finished building: "../manual.c"
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+"../movement.c", line 44: warning #225-D: function "check_boundary" declared implicitly
+Finished building: "../movement.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+ 
+ undefined first referenced
+  symbol       in file     
+ 
+>> Compilation failure
+makefile:150: recipe for target 'Lab11.out' failed
+ --------- ----------------
+makefile:146: recipe for target 'all' failed
+ drive     ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "Lab11.out" not built
+gmake[1]: *** [Lab11.out] Error 1
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+ 
+ undefined first referenced
+ 
+>> Compilation failure
+  symbol       in file     
+makefile:150: recipe for target 'Lab11.out' failed
+ --------- ----------------
+ drive     ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "Lab11.out" not built
+gmake[1]: *** [Lab11.out] Error 1
+gmake: *** [all] Error 2
+makefile:146: recipe for target 'all' failed
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 46: warning #225-D: function "drive" declared implicitly
+Finished building: "../main.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+ 
+ undefined first referenced
+  symbol       in file     
+ --------- ----------------
+ drive     ./main.obj      
+ 
+ 
+>> Compilation failure
+makefile:150: recipe for target 'Lab11.out' failed
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "Lab11.out" not built
+gmake[1]: *** [Lab11.out] Error 1
+gmake: *** [all] Error 2
+makefile:146: recipe for target 'all' failed
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../boundary.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="boundary.d_raw"  "../boundary.c"
+Finished building: "../boundary.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"../movement.c", line 47: error #20: identifier "STOP_BIT" is undefined
+"../movement.c", line 50: error #20: identifier "STOP_BIT" is undefined
+2 errors detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"../movement.c", line 47: error #20: identifier "STOP_BIT" is undefined
+"../movement.c", line 50: error #20: identifier "STOP_BIT" is undefined
+2 errors detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+error #10056: symbol "STOP_BIT" redefined: first defined in "./main.obj"; redefined in "./movement.obj"
+error #10056: symbol "main" redefined: first defined in "./main.obj"; redefined in "./movement.obj"
+error #10010: errors encountered during linking; "Lab11.out" not built
+gmake[1]: *** [Lab11.out] Error 1
+gmake: *** [all] Error 2
+ 
+>> Compilation failure
+makefile:150: recipe for target 'Lab11.out' failed
+makefile:146: recipe for target 'all' failed
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+error #10056: symbol "main" redefined: first defined in "./main.obj"; redefined in "./movement.obj"
+error #10056: symbol "STOP_BYTE" redefined: first defined in "./main.obj"; redefined in "./movement.obj"
+ 
+error #10010: errors encountered during linking; "Lab11.out" not built
+>> Compilation failure
+makefile:150: recipe for target 'Lab11.out' failed
+gmake[1]: *** [Lab11.out] Error 1
+gmake: *** [all] Error 2
+makefile:146: recipe for target 'all' failed
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+Finished building: "../manual.c"
+ 
+Building file: "../utility.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="utility.d_raw"  "../utility.c"
+"../utility.c", line 126: warning #225-D: function "uart_sendNewLine" declared implicitly
+Finished building: "../utility.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+Finished building: "../manual.c"
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+Building file: "../servo.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="servo.d_raw"  "../servo.c"
+Finished building: "../servo.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../servo.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="servo.d_raw"  "../servo.c"
+Finished building: "../servo.c"
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual.obj' failed
+"../manual.c", line 70: error #1148: a declaration cannot have a label
+"../manual.c", line 70: warning #552-D: variable "scanPointArray" was set but never used
+1 error detected in the compilation of "../manual.c".
+gmake: *** [manual.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+"../manual.c", line 71: warning #552-D: variable "scanPointArray" was set but never used
+Finished building: "../manual.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual.obj' failed
+"../manual.c", line 68: error #20: identifier "ScanPoint" is undefined
+1 error detected in the compilation of "../manual.c".
+gmake: *** [manual.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual.obj' failed
+"..\manual.h", line 16: error #20: identifier "oi_t" is undefined
+"../manual.c", line 68: warning #552-D: variable "scanPointArray" was set but never used
+1 error detected in the compilation of "../manual.c".
+gmake: *** [manual.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+"../manual.c", line 68: warning #552-D: variable "scanPointArray" was set but never used
+Finished building: "../manual.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../logMessage.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="logMessage.d_raw"  "../logMessage.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'logMessage.obj' failed
+"../logMessage.c", line 42: error #20: identifier "scanPointArray" is undefined
+1 error detected in the compilation of "../logMessage.c".
+gmake: *** [logMessage.obj] Error 1
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual.obj' failed
+"..\manual.h", line 13: error #20: identifier "ScanPoint" is undefined
+1 error detected in the compilation of "../manual.c".
+gmake: *** [manual.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"..\manual.h", line 13: error #20: identifier "ScanPoint" is undefined
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../logMessage.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="logMessage.d_raw"  "../logMessage.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'logMessage.obj' failed
+"../logMessage.c", line 42: error #20: identifier "scanPointArray" is undefined
+1 error detected in the compilation of "../logMessage.c".
+gmake: *** [logMessage.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+Finished building: "../manual.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../logMessage.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="logMessage.d_raw"  "../logMessage.c"
+Finished building: "../logMessage.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../logMessage.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="logMessage.d_raw"  "../logMessage.c"
+Finished building: "../logMessage.c"
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+"../manual.c", line 74: warning #225-D: function "logScan" declared implicitly
+"../manual.c", line 94: warning #161-D: declaration is incompatible with previous "logScan" (declared at line 74)
+Finished building: "../manual.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../logMessage.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="logMessage.d_raw"  "../logMessage.c"
+Finished building: "../logMessage.c"
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+Finished building: "../manual.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+Finished building: "../manual.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+Finished building: "../manual.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+Finished building: "../manual.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../servo.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="servo.d_raw"  "../servo.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'servo.obj' failed
+"../servo.c", line 170: error #20: identifier "degrees" is undefined
+"../servo.c", line 173: warning #225-D: function "getCycles" declared implicitly
+1 error detected in the compilation of "../servo.c".
+gmake: *** [servo.obj] Error 1
+Building file: "../logMessage.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="logMessage.d_raw"  "../logMessage.c"
+Finished building: "../logMessage.c"
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+Finished building: "../manual.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../servo.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="servo.d_raw"  "../servo.c"
+Finished building: "../servo.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+Finished building: "../manual.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+Finished building: "../manual.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****

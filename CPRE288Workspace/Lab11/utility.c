@@ -6,6 +6,7 @@
  */
 
 #include "utility.h"
+char STOP_BYTE = 0;
 
 void clean_data(int data[], int output[])
 {
