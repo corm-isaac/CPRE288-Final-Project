@@ -11,14 +11,6 @@
 #include "open_interface.h"
 
 
-typedef struct {
-        int angle;
-        uint16_t IR;
-        float ping;
-} ScanPoint;
-
-extern ScanPoint scanPointArray[90];
-
 void logScan();
 
 void man_drive(oi_t *sensor_data);

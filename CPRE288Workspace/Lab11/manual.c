@@ -22,15 +22,9 @@
 #include "logMessage.h"
 #include "boundary.h"
 
-ScanPoint scanPointArray[90];
+//ScanPoint scanPointArray[90];
 
 
-void logScan(){
-    int i;
-    for(i = 0; i < 90; i++){
-        logMessage(150, "Angle: %d IR_Value: %d Ping: %.2f\r\n", scanPointArray[i].angle , scanPointArray[i].IR, scanPointArray[i].ping);
-    }
-}
 
 void man_drive(oi_t *sensor_data){
     uart_sendStr("Don't Moneyshift the cybot\r\n");
@@ -40,7 +34,7 @@ void man_drive(oi_t *sensor_data){
     uart_sendStr("Traverse Left - 'a' \r\n");
     uart_sendStr("Traverse Right - 'd' \r\n");
     uart_sendStr("180 Scan - 'i' \r\n");
-    uart_sendStr("Exit Loop - 'e' \r\n");
+    uart_sendStr("Exit Loop (Hopefully calls oi_free and turns mr robot off - 'e' \r\n"); //call this when done with bot
     uart_sendStr("Wait - 'n' \r\n");
 
 
@@ -82,11 +76,14 @@ void man_drive(oi_t *sensor_data){
                     scanPointArray[i/2].ping = PingScan(i);
                 }
                 logScan(); //prints ScanPointArray
+                //Finds objects in theory
+                printObjects(objectDetermination());
                 command_byte = 'n';
                 break;
             }
             case 'e': //exit
                 exit_char = 1;
+                logMessage(80, "\r\nHypothetically I turn the cybot off\r\n");
                 command_byte = 'n';
                 break;
             case 'n':

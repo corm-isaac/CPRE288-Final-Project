@@ -6,7 +6,115 @@
  */
 
 #include "utility.h"
-char STOP_BYTE = 0;
+
+/*
+ * utility.c
+ *
+ *  Created on: Mar 24, 2026
+ *      Author: cooperrs
+ */
+
+
+#include "Timer.h"
+#include "lcd.h"
+
+#include "uart-interrupt.h"
+#include "utility.h"
+#include "open_interface.h"
+#include "movement.h"
+#include "adc.h"
+#include "ping.h"
+#include "button.h"
+#include "servo.h"
+#include "logMessage.h"
+#include "boundary.h"
+#include "manual.h"
+//GLOBAL VARIABLES - Very pretty unsafe but i dont care
+char STOP_BYTE = 0; //Designed to be manual override to stop the bot. not yet implemented 5/2
+ScanPoint scanPointArray[90]; //An array of ScanPoint objects - ScanPoint objects store the angle, IR and PING value at each angle increment
+Obstacle objectArray[30]; //An array of objects that we have
+
+void logScan(){
+    int i;
+    for(i = 0; i < 90; i++){
+        logMessage(150, "Angle: %d IR_Value: %d Ping: %.2f\r\n", scanPointArray[i].angle , scanPointArray[i].IR, scanPointArray[i].ping);
+    }
+}
+
+// #### OBJECT DETECTION LAB 11 - ISAAC's CODE PROBABLY WILL EXPLODE ####
+
+void initalizeObject(int objectId, int startAngle, int endAngle, float distance_cm){
+    objectArray[objectId].primary_id = objectId;
+    objectArray[objectId].start_angle = startAngle;
+    objectArray[objectId].end_angle = endAngle;
+    objectArray[objectId].distance_cm = distance_cm;
+
+    objectArray[objectId].middle_angle = (startAngle + endAngle) / 2;
+    objectArray[objectId].radial_width = (endAngle - startAngle); //rad
+}
+
+//MAKE SURE SCANPOINTARR CONTAINS DATA BEFORE CALLING THIS FUNCTION
+int objectDetermination(/*Modifies objectArray; reads from scanPointArray*/){ //Populates global objectArray with objects from the scanPoint Array Data
+    int objectCount = 0; //object counter
+    int j; //outer loop
+    int IR_effectiveRange = 45; //45 CM
+    int IR_tolerance = 5;
+    //int ping_effectiveRange = 100; //100 CM
+    for (j = 0; j < 90; j++) {
+        float ping_distance = scanPointArray[j].ping; //reads current ping distance of one point from scanPointArray
+        int IR_distance = scanPointArray[j].IR;//reads current IR distance of one point from scanPointArray
+        int angle = scanPointArray[j].angle; //reads current angle value of one point from scanPoint Array; could be achieved by reading j too
+
+        //PRIMARILY WILL READ FROM IR for determining object width; and use PING for distance herself
+
+        if (IR_distance < IR_effectiveRange){
+            //Need to find out if we have an object by checking the next next value (basically i+2); Assuming that all objects are at least 6 degrees long (ie 3 similar values in a row)
+            if (j > 87) continue; // avoid j+2 overflow
+
+            int ir2 = scanPointArray[j+2].IR;
+
+            if (ir2 < IR_distance - IR_tolerance || ir2 > IR_distance + IR_tolerance) continue; //tests false case
+
+            int beginningAngle = angle;
+            float distance = ping_distance; //yoink from PING because its more accuarte
+
+            int IR_base_distance = scanPointArray[j].IR; //compares a base distance which moves for every next value, improving object detection (found in prev labs)
+
+            while (j < 90) { //i  like windows
+                int next_IR = scanPointArray[j].IR;
+                if (abs(next_IR - IR_base_distance) > IR_tolerance) break;
+                IR_base_distance = next_IR; // slide the window forward
+                j++;
+            }
+
+            int endingAngle = scanPointArray[j-1].angle;
+
+            int primitive_radial_width = endingAngle - beginningAngle;
+            if(primitive_radial_width < 5){
+                continue;
+            }
+
+            //Initialize Object
+            initalizeObject(objectCount, beginningAngle, endingAngle, distance);
+            objectCount++;
+
+        }
+    }
+    return objectCount;
+}
+
+void printObjects(int num){ //number of objects to iterate thru; thinking this param should take input from objectDet
+    //logMessage(100, "Object # |  Angle |  Distance(PING) | Radial Width");
+
+    int i;
+    for (i = 0; i < num; i++) {
+        logMessage(100, "Object: %d | Start Angle: %d; End Angle: %d; Middle Angle: %d |  Distance: %.2f | Width: %d\r\n", objectArray[i].primary_id, objectArray[i].start_angle, objectArray[i].end_angle, objectArray[i].middle_angle, objectArray[i].distance_cm, objectArray[i].radial_width);
+    }
+}
+
+
+// #### END OF LAB 11 ####
+
 
 void clean_data(int data[], int output[])
 {
@@ -123,7 +231,7 @@ void print_obstacles(Obstacle obstacles[], int numObstacles, float ping_data[]) 
     char buffer[32];
     sprintf(buffer, "Objects#  Angle  Distance  Width");
     uart_sendStr(buffer);
-    uart_sendNewLine();
+    //uart_sendNewLine();
     int i = 0;
     for(i = 0; i < numObstacles; i++)
     {
@@ -132,6 +240,6 @@ void print_obstacles(Obstacle obstacles[], int numObstacles, float ping_data[]) 
         int linear_width = 2 * ping_data[angle/2] * sin((obstacles[i].end_angle - obstacles[i].start_angle) * 3.141592 / (2.0 * 180)); //convert sin part to radians, also divide by 2
         sprintf(buffer, "%-10d%-7d%-10.2f%-5d", i, angle, ping_data[angle/2], linear_width);
         uart_sendStr(buffer);
-        uart_sendNewLine();
+        //uart_sendNewLine();
     }
 }
