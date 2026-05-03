@@ -162,7 +162,12 @@ void servo_calibrate(void)
 
 uint16_t IRScan(float degrees){
     servo_move(degrees);
-    return get_distance(adc_read());
+    int i;
+    int sum = 0;
+    for(i = 0; i < 3; i++){
+        sum += adc_read();
+    }
+    return get_distance((sum / 3));
     //return adc_read();
 }
 

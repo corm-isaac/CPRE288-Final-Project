@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="bumpLeft"/>
+		<item key="selection" value="object detec"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="object detec"/>
+			<item value="timer_val"/>
+			<item value="ping_tri"/>
+			<item value="STOP_BIT"/>
+			<item value="CONCRETE"/>
 			<item value="bumpLeft"/>
 			<item value="command_flag"/>
 			<item value="WML"/>
