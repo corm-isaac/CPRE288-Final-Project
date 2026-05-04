@@ -6,6 +6,7 @@
 "./logMessage.obj"
 "./main.obj"
 "./manual.obj"
+"./map.obj"
 "./movement.obj"
 "./open_interface.obj"
 "./ping.obj"

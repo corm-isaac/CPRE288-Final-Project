@@ -15,6 +15,4 @@ void logScan();
 
 void man_drive(oi_t *sensor_data);
 
-
-
 #endif /* MANUAL_H_ */

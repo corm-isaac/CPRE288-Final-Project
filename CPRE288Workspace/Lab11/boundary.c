@@ -74,7 +74,7 @@ void printValues(oi_t *sensor_data){
     logMessage(60,"Right Cliff Sensor: %u\r\n", (getRightCliffSensor(sensor_data)));
 }
 
-int checkBoundary(oi_t *sensor_data){
+int checkBoundary(oi_t *sensor_data){ //LEFT 1; FRONT LEFT 2 ; FRONT RIGHT 3; RIGHT 4
 
     int hole_tolerance = 50;
     int tape_tolerance = -100;
@@ -88,11 +88,11 @@ int checkBoundary(oi_t *sensor_data){
 
     //Front Left
     if (dataValues.frontLeft < (FRONT_LEFT_HOLE +  hole_tolerance) || dataValues.frontLeft > (FRONT_LEFT_TAPE +  tape_tolerance)){
-        return 1;
+        return 2;
     }
     //Left
     else if (dataValues.left < (LEFT_HOLE +  hole_tolerance) || dataValues.left > (LEFT_TAPE +  tape_tolerance)){
-        return 2;
+        return 1;
     }
     //Front Right
     else if(dataValues.frontRight < (FRONT_RIGHT_HOLE +  hole_tolerance) || dataValues.frontRight > (FRONT_RIGHT_TAPE +  tape_tolerance)) {

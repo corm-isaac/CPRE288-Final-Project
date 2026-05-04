@@ -2,7 +2,7 @@
  * utility.h
  *
  *  Created on: Mar 24, 2026
- *      Author: isaac & some claude
+ *      Author: isaac
  */
 
 #ifndef UTILITY_H_
@@ -44,6 +44,7 @@ extern Obstacle   objectArray[30];
 void initalizeObject(int objectId, int startAngle, int endAngle, float distance_cm);
 int  objectDetermination(void);
 void printObjects(int num);
+void cleanGlobals();
 
 // Data Cleaning
 void clean_data(int data[], int output[]);

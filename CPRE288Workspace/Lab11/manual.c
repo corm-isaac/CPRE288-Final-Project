@@ -27,7 +27,6 @@
 
 
 void man_drive(oi_t *sensor_data){
-    uart_sendStr("Don't Moneyshift the cybot\r\n");
 
     uart_sendStr("Traverse Forward - 'w' \r\n");
     uart_sendStr("Traverse Backward - 's' \r\n");
@@ -79,6 +78,13 @@ void man_drive(oi_t *sensor_data){
                 //Finds objects in theory
                 printObjects(objectDetermination());
                 command_byte = 'n';
+
+                cleanGlobals(); //resets objectArray
+                break;
+            }
+            case '1': //movement calibration
+            {
+                logMessage(100, "Calibrate Movement Value: %f", calibrateMovement(sensor_data));
                 break;
             }
             case 'e': //exit

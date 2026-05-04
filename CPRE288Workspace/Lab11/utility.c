@@ -112,6 +112,14 @@ void printObjects(int num){ //number of objects to iterate thru; thinking this p
     }
 }
 
+void cleanGlobals(){
+    Obstacle emptyObstacle;
+    int i;
+    for(i = 0; i < 30; i++){
+        objectArray[i] = emptyObstacle;
+    }
+}
+
 
 // #### END OF LAB 11 ####
 
