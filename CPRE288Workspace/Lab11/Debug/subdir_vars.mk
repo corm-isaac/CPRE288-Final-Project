@@ -17,6 +17,7 @@ C_SRCS += \
 ../logMessage.c \
 ../main.c \
 ../manual.c \
+../map.c \
 ../movement.c \
 ../open_interface.c \
 ../ping.c \
@@ -34,6 +35,7 @@ C_DEPS += \
 ./logMessage.d \
 ./main.d \
 ./manual.d \
+./map.d \
 ./movement.d \
 ./open_interface.d \
 ./ping.d \
@@ -51,6 +53,7 @@ OBJS += \
 ./logMessage.obj \
 ./main.obj \
 ./manual.obj \
+./map.obj \
 ./movement.obj \
 ./open_interface.obj \
 ./ping.obj \
@@ -68,6 +71,7 @@ OBJS__QUOTED += \
 "logMessage.obj" \
 "main.obj" \
 "manual.obj" \
+"map.obj" \
 "movement.obj" \
 "open_interface.obj" \
 "ping.obj" \
@@ -85,6 +89,7 @@ C_DEPS__QUOTED += \
 "logMessage.d" \
 "main.d" \
 "manual.d" \
+"map.d" \
 "movement.d" \
 "open_interface.d" \
 "ping.d" \
@@ -102,6 +107,7 @@ C_SRCS__QUOTED += \
 "../logMessage.c" \
 "../main.c" \
 "../manual.c" \
+"../map.c" \
 "../movement.c" \
 "../open_interface.c" \
 "../ping.c" \

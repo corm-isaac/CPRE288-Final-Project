@@ -42,7 +42,7 @@ double move_forward(oi_t *sensor_data, double distance_mm) {
                 /*BOUNDARY CHECK*/
                 int sensor = checkBoundary(sensor_data);
                 if(sensor){ //returns truthy value
-                    logMessage(40, "Break -> Sensor Tripped: %d\r\n", sensor);
+                    logMessage(50, "\r\nBreak -> Sensor Tripped: %d\r\n", sensor);
                    STOP_BYTE = 1;
                 }
 
@@ -171,4 +171,10 @@ void oops(oi_t *sensor_data, int sensor_tripped){
     }
 }
 
+
+float calibrateMovement(oi_t *sensor_data){
+    float sum = 0;
+    sum = move_forward(sensor_data, 500);
+    return sum;
+}
 
