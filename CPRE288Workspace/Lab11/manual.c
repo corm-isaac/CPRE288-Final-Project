@@ -95,6 +95,16 @@ void man_drive(oi_t *sensor_data){
                 command_byte = 'n';
                 break;
 
+            case 'v': //vacuum
+                suck(2000);
+                command_byte = 'n';
+                break;
+
+            case 'm': //music
+                play_song(1);
+                command_byte = 'n';
+                break;
+
             case 'e': //exit
                 exit_char = 1;
                 //logMessage(80, "\r\nHypothetically I turn the cybot off\r\n");

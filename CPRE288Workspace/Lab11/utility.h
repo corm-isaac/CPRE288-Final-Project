@@ -54,4 +54,6 @@ int  edge_detection(Obstacle obstacles[], int data[], float ping_data[]);
 int  find_smallest_object(Obstacle obstacles[], int numObstacles, float ping_data[]);
 void print_obstacles(Obstacle obstacles[], int numObstacles, float ping_data[]);
 
+
+void suck(int time);
 #endif /* UTILITY_H_ */

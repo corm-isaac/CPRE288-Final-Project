@@ -36,14 +36,14 @@ int main (void) {
     adc_init();
     uart_interrupt_init();
     ping_init();
+    servo_init();
+    load_songs();
 
-   servo_init();
-
-    uart_sendStr("Press any key to start program: \r\n");
+    //uart_sendStr("Press any key to start program: \r\n");
     command_byte = 'n';
-    while(command_flag !=1);
+    //while(command_flag !=1);
     //servo_calibrate();
-    uart_sendStr("mr forest robot please work\r\n");
+    //uart_sendStr("mr forest robot please work\r\n");
     man_drive(sensor_data);
 
     oi_free(sensor_data);

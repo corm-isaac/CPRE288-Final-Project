@@ -16,6 +16,7 @@
 #include "uart-interrupt.h"
 #include <stdbool.h>
 #include "driverlib/interrupt.h"
+#include <string.h>
 
 // These variables are declared as examples for your use in the interrupt handler.
 volatile char command_byte = -1; // byte value for special character used as a command
@@ -102,6 +103,11 @@ void uart_sendChar(char data){
 
     //send data
     UART1_DR_R = data;
+}
+
+void uart_sendChar4(char data){
+    while((UART4_FR_R & 0x20) != 0);
+      UART4_DR_R = data;
 }
 
 char uart_receive(void){

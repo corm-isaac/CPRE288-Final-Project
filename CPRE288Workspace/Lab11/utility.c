@@ -259,3 +259,12 @@ void print_obstacles(Obstacle obstacles[], int numObstacles, float ping_data[]) 
         //uart_sendNewLine();
     }
 }
+
+void suck(int time)
+{
+    uart_sendChar4(138);
+    uart_sendChar4(2);
+    timer_waitMillis(time);
+    uart_sendChar4(138);
+    uart_sendChar4(0);
+}
