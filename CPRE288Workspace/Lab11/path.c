@@ -71,7 +71,10 @@ void auto_corner(oi_t *sensor){
         //Object Array should contain data
         //Assuming we can take heading from IMU if not then this is kinda a lot harder
         //cybot heading (taken from IMU)
-        //float cybot_heading = 0.0; //not implemented yet
+        float cybot_heading = 0.0; //not implemented yet
+        auto_orient(cybot_heading);
+
+
     }
 
 }

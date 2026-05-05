@@ -26,18 +26,24 @@
 #include "logMessage.h"
 #include "boundary.h"
 #include "manual.h"
+#include "song.h"
 
-int main (void) {
-    oi_t *sensor_data = oi_alloc();
-    oi_init(sensor_data);
-    lcd_init();   // Initialize the LCD screen.  This also clears the screen.
+int main (void)
+{
     timer_init();
+    lcd_init();   // Initialize the LCD screen.  This also clears the screen.
+    lcd_printf("turn the bot on");
     IntMasterEnable();
     adc_init();
     uart_interrupt_init();
     ping_init();
     servo_init();
     load_songs();
+
+    oi_t *sensor_data = oi_alloc();
+    oi_init(sensor_data);
+
+    lcd_clear();
 
     //uart_sendStr("Press any key to start program: \r\n");
     command_byte = 'n';

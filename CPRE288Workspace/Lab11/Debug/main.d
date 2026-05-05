@@ -35,6 +35,7 @@ main.obj: ../servo.h
 main.obj: ../logMessage.h
 main.obj: ../boundary.h
 main.obj: ../manual.h
+main.obj: ../song.h
 
 ../main.c:
 
@@ -105,4 +106,6 @@ C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h:
 ../boundary.h:
 
 ../manual.h:
+
+../song.h:
 
