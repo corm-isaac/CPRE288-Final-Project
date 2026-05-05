@@ -34,11 +34,18 @@ char STOP_BYTE = 0; //Designed to be manual override to stop the bot. not yet im
 ScanPoint scanPointArray[90]; //An array of ScanPoint objects - ScanPoint objects store the angle, IR and PING value at each angle increment
 Obstacle objectArray[30]; //An array of objects that we have
 
-void logScan(){
+void logScan()
+{
+    logMessage(20, "SCAN_START:\r\n");
     int i;
     for(i = 0; i < 90; i++){
-        logMessage(150, "Angle: %d IR_Value: %d Ping: %.2f\r\n", scanPointArray[i].angle , scanPointArray[i].IR, scanPointArray[i].ping);
+        //logMessage(150, "Angle: %d IR_Value: %d Ping: %.2f\r\n", scanPointArray[i].angle , scanPointArray[i].IR, scanPointArray[i].ping);
+        logMessage(150, "SCAN:%d %.2f\r\n",
+                   scanPointArray[i].angle,
+                   scanPointArray[i].ping
+        );
     }
+    logMessage(20, "SCAN_END:\r\n");
 }
 
 // #### OBJECT DETECTION LAB 11 - ISAAC's CODE PROBABLY WILL EXPLODE ####
@@ -108,15 +115,16 @@ void printObjects(int num){ //number of objects to iterate thru; thinking this p
 
     int i;
     for (i = 0; i < num; i++) {
-        logMessage(100, "Object: %d | Start Angle: %d; End Angle: %d; Middle Angle: %d |  Distance: %.2f | Width: %d\r\n", objectArray[i].primary_id, objectArray[i].start_angle, objectArray[i].end_angle, objectArray[i].middle_angle, objectArray[i].distance_cm, objectArray[i].radial_width);
-    }
-}
+        //logMessage(100, "Object: %d | Start Angle: %d; End Angle: %d; Middle Angle: %d |  Distance: %.2f | Width: %d\r\n", objectArray[i].primary_id, objectArray[i].start_angle, objectArray[i].end_angle, objectArray[i].middle_angle, objectArray[i].distance_cm, objectArray[i].radial_width);
+        logMessage(100, "OBJECT:%d %d %d %d %.2f %d\r\n",
+                   objectArray[i].primary_id,
+                   objectArray[i].start_angle,
+                   objectArray[i].end_angle,
+                   objectArray[i].middle_angle,
+                   objectArray[i].distance_cm,
+                   objectArray[i].radial_width
+        );
 
-void cleanGlobals(){
-    Obstacle emptyObstacle;
-    int i;
-    for(i = 0; i < 30; i++){
-        objectArray[i] = emptyObstacle;
     }
 }
 
