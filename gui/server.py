@@ -88,13 +88,34 @@ def receiver_loop():
                 try:
                     obj_id, start, end, mid, dist, width = payload.split()
 
+                    # Convert to floats
+                    start = float(start)
+                    end = float(end)
+                    dist_m = float(dist) / 100.0  # cm → meters
+                    width = float(width)
+
+                    # --- COMPUTE WIDTH ---
+                    delta_theta = math.radians(end - start)
+                    computed_width = 2 * dist_m * math.sin(delta_theta / 2)
+
+                    # Midpoint angle
+                    mid = (start + end) / 2.0
+
+                    print(
+                        f"[OBJECT] id={obj_id} "
+                        f"dist={dist_m:.2f}m "
+                        f"span={end - start:.2f}° "
+                        f"computed_width={computed_width:.3f}m "
+                        f"rad_width={width:.3f}"
+                    )
+
                     socketio.emit("object", {
                         "id": int(obj_id),
-                        "start": float(start),
-                        "end": float(end),
-                        "mid": float(mid),
-                        "distance": float(dist),
-                        "width": float(width)
+                        "start_angle": float(start),
+                        "end_angle": float(end),
+                        "mid_angle": float(mid),
+                        "distance": float(dist_m),
+                        "width": float(width),
                     })
 
                 except Exception as e:
