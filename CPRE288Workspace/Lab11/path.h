@@ -11,7 +11,10 @@
 
 void auto_drive(oi_t *sensor);
 
+void auto_orient(float cybot_heading);
 
+void auto_data_least_objects();
 
+void auto_scan(oi_t *sensor);
 
 #endif /* PATH_H_ */
