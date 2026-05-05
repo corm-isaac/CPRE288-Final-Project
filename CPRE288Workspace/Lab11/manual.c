@@ -21,6 +21,7 @@
 #include "servo.h"
 #include "logMessage.h"
 #include "boundary.h"
+#include "song.h"
 //#include "imu.h"
 
 //ScanPoint scanPointArray[90];
@@ -48,6 +49,7 @@ void man_drive(oi_t *sensor_data){
     {
         while(command_flag !=1);
 
+        lcd_printf("%c", command_byte);
         switch(command_byte)
         {
             case 'w': //forward

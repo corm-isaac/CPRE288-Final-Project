@@ -20,8 +20,10 @@ C_SRCS += \
 ../map.c \
 ../movement.c \
 ../open_interface.c \
+../path.c \
 ../ping.c \
 ../servo.c \
+../song.c \
 ../tm4c1231h6pm_startup_ccs.c \
 ../uart-interrupt.c \
 ../utility.c 
@@ -38,8 +40,10 @@ C_DEPS += \
 ./map.d \
 ./movement.d \
 ./open_interface.d \
+./path.d \
 ./ping.d \
 ./servo.d \
+./song.d \
 ./tm4c1231h6pm_startup_ccs.d \
 ./uart-interrupt.d \
 ./utility.d 
@@ -56,8 +60,10 @@ OBJS += \
 ./map.obj \
 ./movement.obj \
 ./open_interface.obj \
+./path.obj \
 ./ping.obj \
 ./servo.obj \
+./song.obj \
 ./tm4c1231h6pm_startup_ccs.obj \
 ./uart-interrupt.obj \
 ./utility.obj 
@@ -74,8 +80,10 @@ OBJS__QUOTED += \
 "map.obj" \
 "movement.obj" \
 "open_interface.obj" \
+"path.obj" \
 "ping.obj" \
 "servo.obj" \
+"song.obj" \
 "tm4c1231h6pm_startup_ccs.obj" \
 "uart-interrupt.obj" \
 "utility.obj" 
@@ -92,8 +100,10 @@ C_DEPS__QUOTED += \
 "map.d" \
 "movement.d" \
 "open_interface.d" \
+"path.d" \
 "ping.d" \
 "servo.d" \
+"song.d" \
 "tm4c1231h6pm_startup_ccs.d" \
 "uart-interrupt.d" \
 "utility.d" 
@@ -110,8 +120,10 @@ C_SRCS__QUOTED += \
 "../map.c" \
 "../movement.c" \
 "../open_interface.c" \
+"../path.c" \
 "../ping.c" \
 "../servo.c" \
+"../song.c" \
 "../tm4c1231h6pm_startup_ccs.c" \
 "../uart-interrupt.c" \
 "../utility.c" 
