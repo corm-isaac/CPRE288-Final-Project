@@ -18920,3 +18920,406 @@ Finished building target: "Lab11.out"
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual.obj' failed
+"../manual.c", line 92: warning #225-D: function "auto_drive" declared implicitly
+"../manual.c", line 92: error #20: identifier "sensor" is undefined
+1 error detected in the compilation of "../manual.c".
+gmake: *** [manual.obj] Error 1
+Building file: "../path.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="path.d_raw"  "../path.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'path.obj' failed
+"../path.c", line 27: warning #225-D: function "uart_sendStr" declared implicitly
+"../path.c", line 30: error #20: identifier "command_byte" is undefined
+"../path.c", line 33: error #20: identifier "command_flag" is undefined
+"../path.c", line 40: warning #225-D: function "auto_path" declared implicitly
+"../path.c", line 44: warning #225-D: function "logMessage" declared implicitly
+"../path.c", line 59: warning #161-D: declaration is incompatible with previous "auto_path" (declared at line 40)
+"../path.c", line 70: warning #225-D: function "uart_sendStr" declared implicitly
+2 errors detected in the compilation of "../path.c".
+gmake: *** [path.obj] Error 1
+Building file: "../map.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="map.d_raw"  "../map.c"
+Finished building: "../map.c"
+ 
+Building file: "../logMessage.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="logMessage.d_raw"  "../logMessage.c"
+Finished building: "../logMessage.c"
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../utility.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="utility.d_raw"  "../utility.c"
+Finished building: "../utility.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual.obj' failed
+"../manual.c", line 92: warning #225-D: function "auto_drive" declared implicitly
+"../manual.c", line 92: error #20: identifier "sensor" is undefined
+1 error detected in the compilation of "../manual.c".
+gmake: *** [manual.obj] Error 1
+Building file: "../path.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="path.d_raw"  "../path.c"
+"../path.c", line 40: warning #225-D: function "auto_path" declared implicitly
+"../path.c", line 44: warning #225-D: function "logMessage" declared implicitly
+"../path.c", line 59: warning #161-D: declaration is incompatible with previous "auto_path" (declared at line 40)
+Finished building: "../path.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+"../manual.c", line 92: warning #225-D: function "auto_drive" declared implicitly
+Finished building: "../manual.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./map.obj" "./movement.obj" "./open_interface.obj" "./path.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+Finished building: "../manual.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./map.obj" "./movement.obj" "./open_interface.obj" "./path.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../path.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="path.d_raw"  "../path.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'path.obj' failed
+"../path.c", line 53: warning #225-D: function "auto_path" declared implicitly
+"../path.c", line 57: warning #225-D: function "logMessage" declared implicitly
+"../path.c", line 72: warning #161-D: declaration is incompatible with previous "auto_path" (declared at line 53)
+"../path.c", line 83: warning #225-D: function "auto_scan" declared implicitly
+"../path.c", line 87: warning #179-D: variable "cybot_heading" was declared but never referenced
+"../path.c", line 99: error #18: expected a ")"
+"../path.c", line 108: warning #12-D: parsing restarts here after previous syntax error
+"../path.c", line 108: error #128: expected a statement
+"../path.c", line 116: warning #161-D: declaration is incompatible with previous "auto_scan" (declared at line 83)
+"../path.c", line 119: warning #225-D: function "logMessage" declared implicitly
+"../path.c", line 122: error #20: identifier "scanPointArray" is undefined
+"../path.c", line 123: warning #225-D: function "IRScan" declared implicitly
+"../path.c", line 124: warning #225-D: function "PingScan" declared implicitly
+"../path.c", line 128: warning #225-D: function "printObjects" declared implicitly
+"../path.c", line 128: warning #225-D: function "objectDetermination" declared implicitly
+"../path.c", line 130: warning #225-D: function "cleanGlobals" declared implicitly
+3 errors detected in the compilation of "../path.c".
+gmake: *** [path.obj] Error 1
+Building file: "../servo.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="servo.d_raw"  "../servo.c"
+Finished building: "../servo.c"
+ 
+Building file: "../manual.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual.d_raw"  "../manual.c"
+Finished building: "../manual.c"
+ 
+Building file: "../utility.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="utility.d_raw"  "../utility.c"
+Finished building: "../utility.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../path.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="path.d_raw"  "../path.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'path.obj' failed
+"../path.c", line 51: warning #225-D: function "auto_scan" declared implicitly
+"../path.c", line 55: warning #179-D: variable "cybot_heading" was declared but never referenced
+"../path.c", line 67: error #18: expected a ")"
+"../path.c", line 76: warning #12-D: parsing restarts here after previous syntax error
+"../path.c", line 76: error #128: expected a statement
+"../path.c", line 84: warning #161-D: declaration is incompatible with previous "auto_scan" (declared at line 51)
+"../path.c", line 87: warning #225-D: function "logMessage" declared implicitly
+"../path.c", line 90: error #20: identifier "scanPointArray" is undefined
+"../path.c", line 91: warning #225-D: function "IRScan" declared implicitly
+"../path.c", line 92: warning #225-D: function "PingScan" declared implicitly
+"../path.c", line 96: warning #225-D: function "printObjects" declared implicitly
+"../path.c", line 96: warning #225-D: function "objectDetermination" declared implicitly
+"../path.c", line 98: warning #225-D: function "cleanGlobals" declared implicitly
+"../path.c", line 121: warning #225-D: function "logMessage" declared implicitly
+3 errors detected in the compilation of "../path.c".
+gmake: *** [path.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../path.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="path.d_raw"  "../path.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'path.obj' failed
+"../path.c", line 41: warning #225-D: function "logMessage" declared implicitly
+"../path.c", line 44: error #20: identifier "scanPointArray" is undefined
+"../path.c", line 45: warning #225-D: function "IRScan" declared implicitly
+"../path.c", line 46: warning #225-D: function "PingScan" declared implicitly
+"../path.c", line 50: warning #225-D: function "printObjects" declared implicitly
+"../path.c", line 50: warning #225-D: function "objectDetermination" declared implicitly
+"../path.c", line 52: warning #225-D: function "cleanGlobals" declared implicitly
+"../path.c", line 71: warning #179-D: variable "cybot_heading" was declared but never referenced
+"../path.c", line 83: error #18: expected a ")"
+"../path.c", line 92: warning #12-D: parsing restarts here after previous syntax error
+"../path.c", line 92: error #128: expected a statement
+"../path.c", line 121: warning #225-D: function "logMessage" declared implicitly
+3 errors detected in the compilation of "../path.c".
+gmake: *** [path.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../path.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="path.d_raw"  "../path.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'path.obj' failed
+"../path.c", line 45: error #20: identifier "scanPointArray" is undefined
+"../path.c", line 46: warning #225-D: function "IRScan" declared implicitly
+"../path.c", line 47: warning #225-D: function "PingScan" declared implicitly
+"../path.c", line 51: warning #225-D: function "printObjects" declared implicitly
+"../path.c", line 51: warning #225-D: function "objectDetermination" declared implicitly
+"../path.c", line 53: warning #225-D: function "cleanGlobals" declared implicitly
+"../path.c", line 72: warning #179-D: variable "cybot_heading" was declared but never referenced
+"../path.c", line 84: error #18: expected a ")"
+"../path.c", line 93: warning #12-D: parsing restarts here after previous syntax error
+"../path.c", line 93: error #128: expected a statement
+3 errors detected in the compilation of "../path.c".
+gmake: *** [path.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../path.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="path.d_raw"  "../path.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'path.obj' failed
+"../path.c", line 47: warning #225-D: function "IRScan" declared implicitly
+"../path.c", line 48: warning #225-D: function "PingScan" declared implicitly
+"../path.c", line 73: warning #179-D: variable "cybot_heading" was declared but never referenced
+"../path.c", line 85: error #18: expected a ")"
+"../path.c", line 94: warning #12-D: parsing restarts here after previous syntax error
+"../path.c", line 94: error #128: expected a statement
+2 errors detected in the compilation of "../path.c".
+gmake: *** [path.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../path.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="path.d_raw"  "../path.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'path.obj' failed
+"../path.c", line 74: warning #179-D: variable "cybot_heading" was declared but never referenced
+"../path.c", line 86: error #18: expected a ")"
+"../path.c", line 95: warning #12-D: parsing restarts here after previous syntax error
+"../path.c", line 95: error #128: expected a statement
+2 errors detected in the compilation of "../path.c".
+gmake: *** [path.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+Building file: "../path.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288-Final-Project/CPRE288Workspace/Lab11" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="path.d_raw"  "../path.c"
+Finished building: "../path.c"
+ 
+Building target: "Lab11.out"
+Invoking: Arm Linker
+"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C1231H6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab11.map" --heap_size=4096 --stack_size=4096 -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab11_linkInfo.xml" --rom_model -o "Lab11.out" "./Timer.obj" "./adc.obj" "./boundary.obj" "./button.obj" "./lcd.obj" "./logMessage.obj" "./main.obj" "./manual.obj" "./map.obj" "./movement.obj" "./open_interface.obj" "./path.obj" "./ping.obj" "./servo.obj" "./tm4c1231h6pm_startup_ccs.obj" "./uart-interrupt.obj" "./utility.obj" "../tm4c1231h6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "Lab11.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab11 ****
+
+"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 24 all -O 
+ 
+gmake[1]: 'Lab11.out' is up to date.
+
+**** Build Finished ****

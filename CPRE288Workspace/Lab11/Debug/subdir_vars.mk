@@ -20,6 +20,7 @@ C_SRCS += \
 ../map.c \
 ../movement.c \
 ../open_interface.c \
+../path.c \
 ../ping.c \
 ../servo.c \
 ../tm4c1231h6pm_startup_ccs.c \
@@ -38,6 +39,7 @@ C_DEPS += \
 ./map.d \
 ./movement.d \
 ./open_interface.d \
+./path.d \
 ./ping.d \
 ./servo.d \
 ./tm4c1231h6pm_startup_ccs.d \
@@ -56,6 +58,7 @@ OBJS += \
 ./map.obj \
 ./movement.obj \
 ./open_interface.obj \
+./path.obj \
 ./ping.obj \
 ./servo.obj \
 ./tm4c1231h6pm_startup_ccs.obj \
@@ -74,6 +77,7 @@ OBJS__QUOTED += \
 "map.obj" \
 "movement.obj" \
 "open_interface.obj" \
+"path.obj" \
 "ping.obj" \
 "servo.obj" \
 "tm4c1231h6pm_startup_ccs.obj" \
@@ -92,6 +96,7 @@ C_DEPS__QUOTED += \
 "map.d" \
 "movement.d" \
 "open_interface.d" \
+"path.d" \
 "ping.d" \
 "servo.d" \
 "tm4c1231h6pm_startup_ccs.d" \
@@ -110,6 +115,7 @@ C_SRCS__QUOTED += \
 "../map.c" \
 "../movement.c" \
 "../open_interface.c" \
+"../path.c" \
 "../ping.c" \
 "../servo.c" \
 "../tm4c1231h6pm_startup_ccs.c" \
