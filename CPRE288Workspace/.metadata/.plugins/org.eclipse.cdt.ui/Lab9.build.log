@@ -1,8 +1,0 @@
-
-**** Build of configuration Debug for project Lab9 ****
-
-"C:\\ti\\ccs1271\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
- 
-gmake[1]: 'Lab9.out' is up to date.
-
-**** Build Finished ****
