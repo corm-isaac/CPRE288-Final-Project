@@ -1,112 +1,74 @@
-/*
- * main.c
+/**
+ * lab5_template.c
  *
- *  Created on: Feb 4, 2026
- *      Author: milajune
+ * Template file for CprE 288 Lab 5
+ *
+ * @author Michael Farmer
+ * @date 04/14/2026
+ *
+ * @author Phillip Jones, updated 6/4/2019
+ * @author Diane Rover, updated 2/25/2021, 2/17/2022
  */
-
-  //cybot 16
-//prototype
-
-void sendString (char *str);
-void getScan();
-
 
 #include "Timer.h"
 #include "lcd.h"
+
+#include "uart-interrupt.h"
+#include <stdbool.h>
 #include "open_interface.h"
-#include "movement.h"
-#include "cyBot_uart.h"
-#include <string.h>
-#include "cyBot_Scan.h"
+#include "adc.h"
+#include "oi_song.h"
+#include "i2c.h"
+#include "imu.h"
 
-//global vars
-
-int angle_array[90];
-float dist_array[90];
-
-/*
- * cyBot testing
- * 2/16:
- * 232750 right(0) val
- * 1198750 left(180) val
- */
-
-void sendString (char *str){
-    int i =0;
-    while(i <= strlen(str)){
-        cyBot_sendByte(str[i]);
-        i++;
-    }
-}
-
-void getScan(){
-    cyBOT_init_Scan(0b0111);
-    cyBOT_Scan_t scan;
-
-    right_calibration_value = 253750; //as of 2/17 -cyBot 27
-    left_calibration_value = 1240750;
-
-    sendString("Beginning Scan\n");
-    char data[50];
-    int range;
-    range = 180;
-    int angle;
-    for (angle = 0; angle <= range; angle+=2){
-        cyBOT_Scan(angle, &scan);
-        sprintf(data, "Angle: %d\t Distance: %.2f \r\n", angle, scan.sound_dist);
-
-        //global var update
-        //angle_array
-        //dist_array
-        angle_array[angle/2] = angle;
-        dist_array[angle/2] = scan.sound_dist;
+volatile char command_byte;
+volatile int command_flag;
 
 
-        sendString(data);
-    }
-    free(&scan);
+int main(void)
+{
+    timer_init(); // Must be called before lcd_init(), which uses timer functions
+    lcd_init();
+    lcd_printf("not working");
+    uart_interrupt_init();
 
-}
 
-
-int main (void) {
     oi_t *sensor_data = oi_alloc();
     oi_init(sensor_data);
-    timer_init();
-    lcd_init();   // Initialize the LCD screen.  This also clears the screen.
-    cyBot_uart_init();
 
-    //lcd_printf("%c", (char)cyBot_getByte()); //ascii char of what was typed in PuTTY
-    //char str[] = "fml";
-    //int size = strlen(str);
-    char str[] = "fml";
-    sendString(str);
+    lcd_clear();
 
-    //cyBOT_SERVO_cal();
+    load_songs();
 
+    //oi_play_song(1);
 
+    /*
+    uart_sendChar4(138);
+    uart_sendChar4(2); //vac on
+    timer_waitMillis(1500);
+    uart_sendChar4(138);
+    uart_sendChar4(0); //vac on
+    */
 
-    //cyBOT_Scan_t scan = calloc(1, sizeof(cyBOT_Scan_t));
-    cyBot_getByte(); //blocking function
-    getScan();
+    imu_init();
+    timer_waitMillis(500);
 
-    int threshold_dist = 30; //distance to begin to register objects
+    char status = i2c_imu_read_register(0x35); //CALIB_STAT
+    while(status & 0x3F != 0x3F) {
+        status = i2c_imu_read_register(0x35); //CALIB_STAT
+        short acc_stat = (status & 0b1100 == 0b1100);
+        short gyro_stat = (status & 0b110000 == 0b110000);
+        short mag_stat = (status & 0b11 == 0b11);
+        lcd_printf("Calibration Status:\nACC: %s\nGYRO: %s\nMAG: %s", acc_stat ? "NOT OK" : "OK", gyro_stat ? "NOT OK" : "OK", mag_stat ? "NOT OK" : "OK");
+        timer_waitMillis(250);
+    }
 
-    //parse through dist_array, look for values <= 30 or greater than 1
+    while(1) {
 
+        lcd_printf("Heading: %f", imu_get_heading_deg());
+        timer_waitMillis(250);
+    }
 
-
-    oi_free(sensor_data);
 
 
 }
-
-
-
-
-
-
-
-
-
