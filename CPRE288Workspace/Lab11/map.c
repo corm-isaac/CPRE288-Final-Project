@@ -20,7 +20,7 @@ Point determineObjectCoordinates(int objectId) { //determines the coordinates of
     float IMU_heading = 0;
 
     // radians
-    double total_angle = (IMU_heading + object.middle_angle) * DEG_TO_RAD;
+    double total_angle = (IMU_heading + ((object.start_angle + object.end_angle) / 2)) * DEG_TO_RAD;
 
     Point obj;
     obj.x = IMU_x + object.distance_cm * sin(total_angle);

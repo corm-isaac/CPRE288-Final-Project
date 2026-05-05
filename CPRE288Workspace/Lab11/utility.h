@@ -27,9 +27,8 @@ typedef struct {
     int   primary_id;      // Object ID
     int   start_angle;     // Start angle (degrees)
     int   end_angle;       // End angle (degrees)
-    int   middle_angle;    // Middle angle (degrees)
     float distance_cm;     // Distance from ping sensor (cm)
-    int   radial_width;    // Angular width (degrees)
+    float linear_width;
 } Obstacle;
 
 // ---- Global Variables ----
@@ -41,7 +40,7 @@ extern Obstacle   objectArray[30];
 // ---- Function Prototypes ----
 
 // Lab 11 - Object Detection
-void initalizeObject(int objectId, int startAngle, int endAngle, float distance_cm);
+void initalizeObject(int objectId, int startAngle, int endAngle, float distance_cm, float linear_width);
 int  objectDetermination(void);
 void printObjects(int num);
 void cleanGlobals();

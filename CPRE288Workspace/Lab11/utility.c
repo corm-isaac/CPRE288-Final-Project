@@ -50,14 +50,12 @@ void logScan()
 
 // #### OBJECT DETECTION LAB 11 - ISAAC's CODE PROBABLY WILL EXPLODE ####
 
-void initalizeObject(int objectId, int startAngle, int endAngle, float distance_cm){
+void initalizeObject(int objectId, int startAngle, int endAngle, float distance_cm, float linear_width){
     objectArray[objectId].primary_id = objectId;
     objectArray[objectId].start_angle = startAngle;
     objectArray[objectId].end_angle = endAngle;
     objectArray[objectId].distance_cm = distance_cm;
-
-    objectArray[objectId].middle_angle = (startAngle + endAngle) / 2;
-    objectArray[objectId].radial_width = (endAngle - startAngle); //rad
+    objectArray[objectId].linear_width = linear_width;
 }
 
 //MAKE SURE SCANPOINTARR CONTAINS DATA BEFORE CALLING THIS FUNCTION
@@ -101,8 +99,11 @@ int objectDetermination(/*Modifies objectArray; reads from scanPointArray*/){ //
                 continue;
             }
 
+            //Find linear width via trig (Sin of dTheta / 2) = (half of linear width / distance). Solve for linear width. [Draw diagram]
+            int linear_width = 2 * ping_distance * sin((endingAngle - beginningAngle) * 3.141592 / (2.0 * 180)); //convert sin part to radians, also divide by 2
+
             //Initialize Object
-            initalizeObject(objectCount, beginningAngle, endingAngle, distance);
+            initalizeObject(objectCount, beginningAngle, endingAngle, distance, linear_width);
             objectCount++;
 
         }
@@ -116,13 +117,12 @@ void printObjects(int num){ //number of objects to iterate thru; thinking this p
     int i;
     for (i = 0; i < num; i++) {
         //logMessage(100, "Object: %d | Start Angle: %d; End Angle: %d; Middle Angle: %d |  Distance: %.2f | Width: %d\r\n", objectArray[i].primary_id, objectArray[i].start_angle, objectArray[i].end_angle, objectArray[i].middle_angle, objectArray[i].distance_cm, objectArray[i].radial_width);
-        logMessage(100, "OBJECT:%d %d %d %d %.2f %d\r\n",
+        logMessage(100, "OBJECT:%d %d %d %.2f %.2f\r\n",
                    objectArray[i].primary_id,
                    objectArray[i].start_angle,
                    objectArray[i].end_angle,
-                   objectArray[i].middle_angle,
                    objectArray[i].distance_cm,
-                   objectArray[i].radial_width
+                   objectArray[i].linear_width
         );
 
     }
