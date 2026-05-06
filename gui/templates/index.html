@@ -207,6 +207,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
       gap: 20px;
+      max-height: 50%;
     }
 
     .visualization-container {
@@ -273,6 +274,29 @@
         grid-template-columns: 1fr;
       }
     }
+
+    .main-layout {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .sidebar {
+      width: 25%;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .map-area {
+      width: 75%;
+    }
+
+    .map-area canvas {
+      width: 100%;
+      height: 600px;
+    }
   </style>
 </head>
 
@@ -289,78 +313,79 @@
     </div>
   </header>
 
-  <div class="controls">
-    <!-- Connection Control -->
-    <div class="control-group">
-      <h3>Connection</h3>
-      <button class="connect-btn" onclick="connectRobot()">Connect / Reconnect</button>
+  <div class="main-layout">
+    
+    <!-- LEFT: CONTROLS -->
+    <div class="sidebar">
+      
+      <div class="control-group">
+        <h3>Connection</h3>
+        <button class="connect-btn" onclick="connectRobot()">Connect / Reconnect</button>
+      </div>
+
+      <div class="control-group">
+        <h3>Movement</h3>
+        <div class="movement-pad">
+          <button class="movement-btn" id="btn_w">↑<br>FWD</button>
+          <button class="movement-btn" id="btn_a">←<br>LEFT</button>
+          <button class="movement-btn" id="btn_s">↓<br>BACK</button>
+          <button class="movement-btn" id="btn_d">→<br>RIGHT</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <h3>Actions</h3>
+        <div class="action-buttons">
+          <button class="action-btn" onclick="send('i')">📡 Scan</button>
+          <button class="action-btn" onclick="clearScan()">🗑️ Clear</button>
+          <button class="action-btn" onclick="send('m')">🎧 Song</button>
+          <button class="action-btn" onclick="send('v')">😱 Vacuum</button>
+          <button class="action-btn danger" onclick="send('e')">⏹️ Exit</button>
+        </div>
+      </div>
+
+      <div class="info-panel">
+        <h3>Robot State</h3>
+        <div class="info-row">
+          <span class="info-label">X Position</span>
+          <span class="info-value" id="info-x">0.0 m</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Y Position</span>
+          <span class="info-value" id="info-y">0.0 m</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Heading</span>
+          <span class="info-value" id="info-theta">0.0°</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Scan Points</span>
+          <span class="info-value" id="info-points">0</span>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Movement Control -->
-    <div class="control-group">
-      <h3>Movement</h3>
-      <div class="movement-pad">
-        <button class="movement-btn" id="btn_w" title="Move Forward (W)">↑<br>FWD</button>
-        <button class="movement-btn" id="btn_a" title="Turn Left (A)">←<br>LEFT</button>
-        <button class="movement-btn" id="btn_s" title="Move Backward (S)">↓<br>BACK</button>
-        <button class="movement-btn" id="btn_d" title="Turn Right (D)">→<br>RIGHT</button>
+    <!-- RIGHT: POLAR MAP -->
+    <div class="map-area">
+      <div class="visualization-container">
+        <h3>🔍 Polar Scan (Range & Bearing)</h3>
+        <canvas id="polar" width="600" height="600"></canvas>
+        <small style="opacity: 0.6; display: block; margin-top: 10px;">
+          Polar coordinates centered on robot. Distance = radius, angle = bearing.
+        </small>
       </div>
     </div>
 
-    <!-- Actions -->
-    <div class="control-group">
-      <h3>Actions</h3>
-      <div class="action-buttons">
-        <button class="action-btn" onclick="send('i')">📡 Scan</button>
-        <button class="action-btn" onclick="clearScan()">🗑️ Clear</button>
-        <button class="action-btn" onclick="send('m')">🎧 Song</button>
-        <button class="action-btn" onclick="send('v')">😱 Vacuum</button>
-        <button class="action-btn danger" onclick="send('e')">⏹️ Exit</button>
-      </div>
-    </div>
-
-    <!-- Robot State Info -->
-    <div class="info-panel">
-      <h3>Robot State</h3>
-      <div class="info-row">
-        <span class="info-label">X Position</span>
-        <span class="info-value" id="info-x">0.0 m</span>
-      </div>
-      <div class="info-row">
-        <span class="info-label">Y Position</span>
-        <span class="info-value" id="info-y">0.0 m</span>
-      </div>
-      <div class="info-row">
-        <span class="info-label">Heading</span>
-        <span class="info-value" id="info-theta">0.0°</span>
-      </div>
-      <div class="info-row">
-        <span class="info-label">Scan Points</span>
-        <span class="info-value" id="info-points">0</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Visualizations -->
-  <div class="visualization-grid">
-    <div class="visualization-container">
-      <h3>📍 Cartesian Map (Real Coordinates)</h3>
-      <canvas id="map" width="600" height="600"></canvas>
-      <small style="opacity: 0.6; display: block; margin-top: 10px;">X-Y coordinate space. Red circle = robot position, line shows heading. Black dots = scan points.</small>
-    </div>
-
-    <div class="visualization-container">
-      <h3>🔍 Polar Scan (Range & Bearing)</h3>
-      <canvas id="polar" width="600" height="600"></canvas>
-      <small style="opacity: 0.6; display: block; margin-top: 10px;">Polar coordinates centered on robot. Distance = radius from center, angle = bearing from robot heading.</small>
-    </div>
   </div>
 </div>
+
 
 <script>
 const socket = io();
 
-let mapPoints = [];
+let raw_scan = [];
+let objects = [];
 let robot = { x: 0, y: 0, theta: 0 };
 let connected = false;
 
@@ -432,7 +457,8 @@ function bindHold(id, cmd) {
 }
 
 function clearScan() {
-  mapPoints = [];
+  raw_scan = [];
+  objects = [];
   draw();
 }
 
@@ -441,6 +467,9 @@ window.onload = () => {
   bindHold("btn_a", "a");
   bindHold("btn_s", "s");
   bindHold("btn_d", "d");
+
+  //addTestObject();
+  draw();
 };
 
 // --- RECEIVE DATA ---
@@ -451,7 +480,12 @@ socket.on("pose", data => {
 });
 
 socket.on("scan", data => {
-  mapPoints.push(data);
+  raw_scan.push(data);
+  draw();
+});
+
+socket.on("object", data => {
+  objects.push(data);
   draw();
 });
 
@@ -463,205 +497,138 @@ function updateInfo() {
   document.getElementById("info-x").innerText = robot.x.toFixed(2) + " m";
   document.getElementById("info-y").innerText = robot.y.toFixed(2) + " m";
   document.getElementById("info-theta").innerText = (robot.theta * 180 / Math.PI).toFixed(1) + "°";
-  document.getElementById("info-points").innerText = mapPoints.length;
+  document.getElementById("info-points").innerText = raw_scan.length;
 }
 
-// --- CARTESIAN VISUALIZATION ---
-function drawCartesian() {
-  const canvas = document.getElementById("map");
-  const ctx = canvas.getContext("2d");
-  const rect = canvas.getBoundingClientRect();
-  
-  // High DPI rendering
-  const dpr = window.devicePixelRatio || 1;
-  canvas.width = rect.width * dpr;
-  canvas.height = rect.height * dpr;
-  ctx.scale(dpr, dpr);
-  const displayWidth = rect.width;
-  const displayHeight = rect.height;
 
-  ctx.clearRect(0, 0, displayWidth, displayHeight);
 
-  const scale = 2; // pixels per meter
-  const cx = displayWidth / 2;
-  const cy = displayHeight / 2;
-
-  // Grid background
-  ctx.strokeStyle = "rgba(59, 130, 246, 0.1)";
-  ctx.lineWidth = 1;
-  const gridSpacing = 50; // pixels
-  for (let i = -displayWidth; i < displayWidth; i += gridSpacing) {
-    ctx.beginPath();
-    ctx.moveTo(i + cx, -displayHeight + cy);
-    ctx.lineTo(i + cx, displayHeight + cy);
-    ctx.stroke();
-  }
-  for (let i = -displayHeight; i < displayHeight; i += gridSpacing) {
-    ctx.beginPath();
-    ctx.moveTo(-displayWidth + cx, i + cy);
-    ctx.lineTo(displayWidth + cx, i + cy);
-    ctx.stroke();
-  }
-
-  // Axes
-  ctx.strokeStyle = "rgba(59, 130, 246, 0.3)";
-  ctx.lineWidth = 2;
-  ctx.beginPath();
-  ctx.moveTo(0, cy);
-  ctx.lineTo(displayWidth, cy);
-  ctx.stroke();
-  ctx.beginPath();
-  ctx.moveTo(cx, 0);
-  ctx.lineTo(cx, displayHeight);
-  ctx.stroke();
-
-  // Scan points
-  ctx.fillStyle = "#60a5fa";
-  mapPoints.forEach(p => {
-    const px = cx + p.x * scale;
-    const py = cy - p.y * scale;
-    ctx.beginPath();
-    ctx.arc(px, py, 3, 0, Math.PI * 2);
-    ctx.fill();
-  });
-
-  // Robot position
-  const rx = cx + robot.x * scale;
-  const ry = cy - robot.y * scale;
-
-  // Robot body circle
-  ctx.fillStyle = "#10b981";
-  ctx.beginPath();
-  ctx.arc(rx, ry, 8, 0, Math.PI * 2);
-  ctx.fill();
-
-  // Robot heading line
-  const headingLength = 25;
-  const hx = rx + headingLength * Math.cos(robot.theta);
-  const hy = ry - headingLength * Math.sin(robot.theta);
-
-  ctx.strokeStyle = "#ef4444";
-  ctx.lineWidth = 3;
-  ctx.beginPath();
-  ctx.moveTo(rx, ry);
-  ctx.lineTo(hx, hy);
-  ctx.stroke();
-
-  // Heading arrow
-  const arrowSize = 6;
-  const angle1 = robot.theta + Math.PI * 0.75;
-  const angle2 = robot.theta - Math.PI * 0.75;
-  ctx.beginPath();
-  ctx.moveTo(hx, hy);
-  ctx.lineTo(hx + arrowSize * Math.cos(angle1), hy - arrowSize * Math.sin(angle1));
-  ctx.moveTo(hx, hy);
-  ctx.lineTo(hx + arrowSize * Math.cos(angle2), hy - arrowSize * Math.sin(angle2));
-  ctx.stroke();
-}
-
-// --- POLAR VISUALIZATION ---
 function drawPolar() {
   const canvas = document.getElementById("polar");
   const ctx = canvas.getContext("2d");
   const rect = canvas.getBoundingClientRect();
-  
-  // High DPI rendering
+
   const dpr = window.devicePixelRatio || 1;
   canvas.width = rect.width * dpr;
   canvas.height = rect.height * dpr;
   ctx.scale(dpr, dpr);
-  const displayWidth = rect.width;
-  const displayHeight = rect.height;
 
-  ctx.clearRect(0, 0, displayWidth, displayHeight);
+  const w = rect.width;
+  const h = rect.height;
 
-  const cx = displayWidth / 2;
-  const cy = displayHeight / 2;
-  const maxRadius = 180; // pixels
+  ctx.clearRect(0, 0, w, h);
 
-  // Radial grid (range circles)
+  const cx = w / 2;
+  const cy = h * 0.9; // push center down so semicircle fits nicely
+  const maxRadius = Math.min(w * 0.45, h * 0.8);
+
+  const maxScanRange = 1.5; // meters
+  //const maxScanRange = 150 //cm
+
+  // --- SEMICIRCLE GRID ---
   ctx.strokeStyle = "rgba(59, 130, 246, 0.2)";
   ctx.lineWidth = 1;
-  const ringSpacing = 50; // pixels
-  for (let r = ringSpacing; r < maxRadius; r += ringSpacing) {
+
+  // Range arcs (semi)
+  const rings = 4;
+  for (let i = 1; i <= rings; i++) {
+    let r = (i / rings) * maxRadius;
     ctx.beginPath();
-    ctx.arc(cx, cy, r, 0, Math.PI * 2);
+    ctx.arc(cx, cy, r, Math.PI, 0); // 180° arc
     ctx.stroke();
   }
 
-  // Angular grid (bearing lines)
-  for (let angle = 0; angle < Math.PI * 2; angle += Math.PI / 8) {
-    const x1 = cx + maxRadius * Math.cos(angle);
-    const y1 = cy - maxRadius * Math.sin(angle);
+  // Angle lines (0° right → 180° left)
+  for (let deg = 0; deg <= 180; deg += 30) {
+    let rad = deg * Math.PI / 180;
+    let x = cx + maxRadius * Math.cos(rad);
+    let y = cy - maxRadius * Math.sin(rad);
+
     ctx.beginPath();
     ctx.moveTo(cx, cy);
-    ctx.lineTo(x1, y1);
+    ctx.lineTo(x, y);
     ctx.stroke();
   }
 
-  // Cardinal directions
-  ctx.fillStyle = "rgba(96, 165, 250, 0.5)";
+  // Labels
+  ctx.fillStyle = "rgba(96, 165, 250, 0.7)";
   ctx.font = "bold 12px monospace";
   ctx.textAlign = "center";
-  ctx.fillText("0°", cx, cy - maxRadius - 15);
-  ctx.fillText("90°", cx + maxRadius + 15, cy + 5);
-  ctx.fillText("180°", cx, cy + maxRadius + 15);
-  ctx.fillText("270°", cx - maxRadius - 15, cy + 5);
 
-  // Scan points in polar coordinates
-  const maxScanRange = 150; // meters (adjust to your sensor)
-  
-  mapPoints.forEach(p => {
-    // Convert Cartesian point to polar relative to robot
-    let dx = p.x - robot.x;
-    let dy = p.y - robot.y;
+  ctx.fillText("0°", cx + maxRadius + 20, cy);
+  ctx.fillText("90°", cx, cy - maxRadius - 10);
+  ctx.fillText("180°", cx - maxRadius - 25, cy);
 
-    // Distance from robot
-    let range = Math.sqrt(dx * dx + dy * dy);
-    
-    // Absolute bearing in world frame
-    let absoluteBearing = Math.atan2(dy, dx);
-    
-    // Bearing relative to robot's heading (convert to robot's frame)
-    let relativeBearing = absoluteBearing - robot.theta;
-    
-    // Normalize angle to [-pi, pi]
-    while (relativeBearing > Math.PI) relativeBearing -= Math.PI * 2;
-    while (relativeBearing < -Math.PI) relativeBearing += Math.PI * 2;
-
-    // Scale range for visualization
-    let r = (range / maxScanRange) * maxRadius;
-
-    // Don't plot points beyond max range
-    if (r > maxRadius) return;
-
-    // Convert to canvas coordinates
-    let x = cx + r * Math.cos(relativeBearing);
-    let y = cy - r * Math.sin(relativeBearing);
-
-    ctx.fillStyle = "#60a5fa";
-    ctx.beginPath();
-    ctx.arc(x, y, 3, 0, Math.PI * 2);
-    ctx.fill();
-  });
-
-  // Robot at center
+  // --- ROBOT ---
   ctx.fillStyle = "#10b981";
   ctx.beginPath();
   ctx.arc(cx, cy, 8, 0, Math.PI * 2);
   ctx.fill();
 
-  // Heading indicator (0° direction)
+  // --- FORWARD DIRECTION LINE (90° up) ---
   ctx.strokeStyle = "#ef4444";
   ctx.lineWidth = 3;
   ctx.beginPath();
   ctx.moveTo(cx, cy);
   ctx.lineTo(cx, cy - maxRadius);
   ctx.stroke();
+
+  objects.forEach(obj => {
+    const angleRad = obj.mid_angle * Math.PI / 180;
+
+    // Distance (cm → pixels)
+    let r = (obj.distance / maxScanRange) * maxRadius;
+    if (r > maxRadius) return;
+
+    // Position
+    const x = cx + r * Math.cos(angleRad);
+    const y = cy - r * Math.sin(angleRad);
+
+    // Convert object width → pixel size
+    // width is linear size at that distance
+    let pixelWidth = (obj.width / maxScanRange) * maxRadius;
+
+    // Prevent invisible or massive blobs
+    let radius = Math.max(3, pixelWidth / 2);
+
+    // Draw filled circle
+    ctx.fillStyle = "rgba(96, 165, 250, 0.5)";
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Outline
+    ctx.strokeStyle = "#60a5fa";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // Center point (optional)
+    ctx.fillStyle = "#10b981";
+    ctx.beginPath();
+    ctx.arc(x, y, 3, 0, Math.PI * 2);
+    ctx.fill();
+  });
+
+  // --- DRAW SCAN POINTS ---
+  ctx.fillStyle = "#22c55e"; // green points
+
+  raw_scan.forEach(p => {
+    const angleRad = p.angle * Math.PI / 180;
+
+    // convert cm → same unit as maxScanRange
+    let r = (p.ping / ( maxScanRange * 100 ) ) * maxRadius;
+
+    if (r > maxRadius) return;
+
+    const x = cx + r * Math.cos(angleRad);
+    const y = cy - r * Math.sin(angleRad);
+
+    ctx.beginPath();
+    ctx.arc(x, y, 2, 0, Math.PI * 2);
+    ctx.fill();
+  });
 }
 
 function draw() {
-  drawCartesian();
   drawPolar();
 }
 
