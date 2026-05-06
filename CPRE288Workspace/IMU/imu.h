@@ -17,6 +17,8 @@
 void imu_init();
 void imu_write_command(char address, char data);
 float imu_get_heading_deg();
+void imu_set_compass_mode();
+void imu_set_ndof_mode();
 
 
 
