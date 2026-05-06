@@ -40,8 +40,9 @@ void logScan()
     int i;
     for(i = 0; i < 90; i++){
         //logMessage(150, "Angle: %d IR_Value: %d Ping: %.2f\r\n", scanPointArray[i].angle , scanPointArray[i].IR, scanPointArray[i].ping);
-        logMessage(150, "SCAN:%d %.2f\r\n",
+        logMessage(150, "SCAN:%d %d %.2f\r\n",
                    scanPointArray[i].angle,
+                   scanPointArray[i].IR,
                    scanPointArray[i].ping
         );
     }
@@ -54,9 +55,8 @@ void initalizeObject(int objectId, int startAngle, int endAngle, float distance_
     objectArray[objectId].primary_id = objectId;
     objectArray[objectId].start_angle = startAngle;
     objectArray[objectId].end_angle = endAngle;
-    objectArray[objectId].distance_cm = distance_cm;
-
     objectArray[objectId].middle_angle = (startAngle + endAngle) / 2;
+    objectArray[objectId].distance_cm = distance_cm;
     objectArray[objectId].radial_width = (endAngle - startAngle); //rad
 }
 
