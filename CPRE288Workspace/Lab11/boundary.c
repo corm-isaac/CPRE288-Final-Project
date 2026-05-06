@@ -77,7 +77,7 @@ void printValues(oi_t *sensor_data){
 int checkBoundary(oi_t *sensor_data){ //LEFT 1; FRONT LEFT 2 ; FRONT RIGHT 3; RIGHT 4
 
     int hole_tolerance = 50;
-    int tape_tolerance = -100;
+    int tape_tolerance = -80;
 
     oi_sensor_val dataValues = {0,0,0,0};
 

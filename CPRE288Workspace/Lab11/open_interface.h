@@ -199,4 +199,6 @@ double oi_getMotorCalibrationLeft(void);
 // Gets the encoder calibration for the right encoder
 double oi_getMotorCalibrationRight(void);
 
+void oi_uartSendChar(char data);
+
 #endif /* OPEN_INTERFACE_H_ */

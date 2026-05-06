@@ -104,11 +104,11 @@ void uart_sendChar(char data){
     //send data
     UART1_DR_R = data;
 }
-
+/*
 void uart_sendChar4(char data){
     while((UART4_FR_R & 0x20) != 0);
       UART4_DR_R = data;
-}
+}*/
 
 char uart_receive(void){
 
