@@ -15,6 +15,8 @@ uart-interrupt.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/inclu
 uart-interrupt.obj: ../uart-interrupt.h
 uart-interrupt.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdbool.h
 uart-interrupt.obj: C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/interrupt.h
+uart-interrupt.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/string.h
+uart-interrupt.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h
 
 ../uart-interrupt.c:
 
@@ -45,4 +47,8 @@ C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_stdint.h:
 C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdbool.h:
 
 C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/interrupt.h:
+
+C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/string.h:
+
+C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h:
 
