@@ -51,21 +51,19 @@ int main(void)
     */
 
     imu_init();
-    timer_waitMillis(500);
+    timer_waitMillis(250);
+    lcd_printf("3 to set init heading"); //would be some sort of waiting
+    timer_waitMillis(3000);
 
-    char status = i2c_imu_read_register(0x35); //CALIB_STAT
-    while(status & 0x3F != 0x3F) {
-        status = i2c_imu_read_register(0x35); //CALIB_STAT
-        short acc_stat = (status & 0b1100 == 0b1100);
-        short gyro_stat = (status & 0b110000 == 0b110000);
-        short mag_stat = (status & 0b11 == 0b11);
-        lcd_printf("Calibration Status:\nACC: %s\nGYRO: %s\nMAG: %s", acc_stat ? "NOT OK" : "OK", gyro_stat ? "NOT OK" : "OK", mag_stat ? "NOT OK" : "OK");
-        timer_waitMillis(250);
-    }
+    //imu_set_compass_mode(); //Does calibration loop also and gets initial heading
+    timer_waitMillis(250);
+    imu_set_ndof_mode();
 
     while(1) {
 
-        lcd_printf("Heading: %f", imu_get_heading_deg());
+        //lcd_printf("%x", i2c_imu_read_register(0x3D));
+        lcd_printf("Heading: %f\nMode: %X\nCALIB: %X", imu_get_heading_deg(), i2c_imu_read_register(0x3D), i2c_imu_read_register(0x35));
+
         timer_waitMillis(250);
     }
 
