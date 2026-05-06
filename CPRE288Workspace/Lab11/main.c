@@ -38,12 +38,14 @@ int main (void)
     uart_interrupt_init();
     ping_init();
     servo_init();
-    load_songs();
+
 
     oi_t *sensor_data = oi_alloc();
     oi_init(sensor_data);
 
     lcd_clear();
+
+    load_songs();
 
     //uart_sendStr("Press any key to start program: \r\n");
     command_byte = 'n';

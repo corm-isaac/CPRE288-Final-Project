@@ -17,8 +17,7 @@ void go_around(oi_t *sensor_data, short direction);
 void oops(oi_t *sensor_data, int sensor_tripped);
 float calibrateMovement(oi_t *sensor_data);
 
-void bumpLeft(oi_t *sensor_data);
-void bumpRight(oi_t *sensor_data);
+
 
 
 #endif /* MOVEMENT_H_ */

@@ -38,7 +38,7 @@ void uart_interrupt_init(void);
 // Send a byte over UART1 from CyBot to PuTTY
 void uart_sendChar(char data);
 
-void uart_sendChar4(char data);
+//void uart_sendChar4(char data);
 
 // CyBot waits (i.e. blocks) to receive a byte from PuTTY
 // returns byte that was received by UART1

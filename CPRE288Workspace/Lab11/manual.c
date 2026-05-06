@@ -47,36 +47,53 @@ void man_drive(oi_t *sensor_data){
     char exit_char = 0;
     while(!exit_char)
     {
-        while(command_flag !=1);
+        while(command_flag !=1){};
 
-        lcd_printf("%c", command_byte);
+        if(command_byte != 'n')
+        {
+            lcd_printf("%c  %x", command_byte, command_byte);
+        }
+
         switch(command_byte)
         {
             case 'w': //forward
+                command_flag = 0;
+                command_byte = 'n';
                 move_forward(sensor_data, 100); //10cm
                 //logMessage(15, "Forward 10\r\n");
-                command_byte = 'n';
+
+
                 break;
 
             case 'a': // left
+                command_flag = 0;
+                command_byte = 'n';
                 turn_left(sensor_data, 10);
                 //logMessage(15, "Left 10\r\n");
-                command_byte = 'n';
+
+
                 break;
 
             case 's': //back
+                command_flag = 0;
+                command_byte = 'n';
                 move_backward(sensor_data, 100); //10cm
                 //logMessage(15, "Back 10\r\n");
-                command_byte = 'n';
+
                 break;
 
             case 'd': //right
+                command_flag = 0;
+                command_byte = 'n';
                 turn_right(sensor_data, 10);
                 //logMessage(15, "Right 10\r\n");
-                command_byte = 'n';
+
+
                 break;
 
             case 'i':{
+                command_flag = 0;
+                command_byte = 'n';
                 //logMessage(20, "\r\n180 Scan\r\n");
                 int i;
                 for(i = 0; i < 180; i += 2)
@@ -89,36 +106,49 @@ void man_drive(oi_t *sensor_data){
                 logScan(); //prints ScanPointArray
                 //Finds objects in theory
                 printObjects(objectDetermination());
-                command_byte = 'n';
+
+
                 break;
             }
             case 'p': //update position and angle
-                logMessage(60, "\r\nRight 10\r\n");
+                command_flag = 0;
                 command_byte = 'n';
+                logMessage(60, "\r\nRight 10\r\n");
+
+
                 break;
 
             case 'v': //vacuum
-                suck(2000);
+                command_flag = 0;
                 command_byte = 'n';
+                suck(2000);
+
                 break;
 
             case 'm': //music
-                play_song(1);
+                command_flag = 0;
                 command_byte = 'n';
+                play_song(1);
+
                 break;
 
             case 'e': //exit
+                command_flag = 0;
+                command_byte = 'n';
                 exit_char = 1;
                 //logMessage(80, "\r\nHypothetically I turn the cybot off\r\n");
-                command_byte = 'n';
+
                 break;
             case 'n':
                 logMessage(15, "\r\nWaiting...\r\n");
                 while(command_byte == 'n');
                 break;
             default:
-                logMessage(40, "\r\nButton not pressed correctly: %c\r\n", command_byte);
+                command_flag = 0;
+
+                logMessage(40, "\r\nButton not pressed correctly: %c    %x\r\n", command_byte, command_byte);
                 command_byte = 'n';
+
         }
 
         //lcd_printf("Heading: %f", imu_get_heading_deg());

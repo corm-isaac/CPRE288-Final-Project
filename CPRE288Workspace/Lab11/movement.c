@@ -19,49 +19,66 @@
 * @param double_distance_mm The real-world distance to travel
 * @date 02/04/2026
 */
-double move_forward(oi_t *sensor_data, double distance_mm) {
+double move_forward(oi_t *sensor_data, double distance_mm)
+{
     double sum = 0;
+    int status = 0;
 
-        if (distance_mm > 0) {
-            oi_setWheels (75,75);
 
-            while (sum < distance_mm){
-                oi_update(sensor_data);
-                sum += (*sensor_data).distance;
+    oi_setWheels(75, 75);
 
-                if ((*sensor_data).bumpLeft){
-                    sum -= 75;
-                    bumpLeft(sensor_data);
-                    oi_setWheels(75, 75);
-                } else if ((*sensor_data).bumpRight){
-                    sum -= 75;
-                    bumpRight(sensor_data);
-                    oi_setWheels(75, 75);
-                }
+    while (sum < distance_mm)
+    {
+        oi_update(sensor_data);
+        sum += (*sensor_data).distance;
 
-                /*BOUNDARY CHECK*/
-                int sensor = checkBoundary(sensor_data);
-                if(sensor){ //returns truthy value
-                    logMessage(50, "\r\nBreak -> Sensor Tripped: %d\r\n", sensor);
-                   STOP_BYTE = 1;
-                }
 
-                if(STOP_BYTE) {
-                      STOP_BYTE = 0;
-                      break;
-                }
-            }
-        } else {
-            oi_setWheels(-75, -75);
-
-            while (sum > distance_mm) {
-                oi_update(sensor_data);
-                sum += (*sensor_data).distance;
-            }
+        if ((*sensor_data).bumpLeft)
+        {
+            status = 5; //left
+            //sum -= 75;
+            //logMessage(100, "BUMP LEFT\r\n");
+            //move_backward(sensor_data, 100);
+            break;
+        }
+        else if ((*sensor_data).bumpRight)
+        {
+            status = 6; //right
+            //sum -= 75;
+            //logMessage(100, "BUMP RIGHT\r\n");
+            //move_backward(sensor_data, 100);
+            break;
         }
 
-        oi_setWheels(0,0);
-        return sum;
+        /*BOUNDARY CHECK*/
+        int ir_sensor = checkBoundary(sensor_data);
+        if (ir_sensor != 0)
+        { // returns truthy value
+            //logMessage(50, "\r\nBreak -> Sensor Tripped: %d\r\n", sensor);
+            status = ir_sensor;
+            break;
+        }
+    }
+
+    oi_setWheels(0, 0);
+    if(status == 5)
+    {
+        logMessage(100, "BUMP LEFT\r\n");
+    }
+    else if(status == 6)
+    {
+        logMessage(100, "BUMP RIGHT\r\n");
+    }
+    else
+    {
+        if(status == 1){logMessage(100, "IR LEFT: %d\r\n", getLeftCliffSensor(sensor_data));}
+        if(status == 2){logMessage(100, "IR FRONT LEFT: %d\r\n", getFrontLeftCliffSensor(sensor_data));}
+        if(status == 3){logMessage(100, "IR FRONT RIGHT: %d\r\n", getFrontRightCliffSensor(sensor_data));}
+        if(status == 4){logMessage(100, "IR RIGHT: %d\r\n", getRightCliffSensor(sensor_data));}
+    }
+
+    move_backward(sensor_data, 50);
+    return sum;
 }
 
 double move_backward(oi_t *sensor_data, double distance_mm) {
@@ -128,27 +145,6 @@ double turn_left(oi_t *sensor_data, double degrees)
         return sum;
 
 }
-
-
-void bumpLeft(oi_t *sensor_data) {
-
-    move_forward(sensor_data, -150);
-    turn_right(sensor_data, 90);
-    move_forward(sensor_data, 250);
-    turn_left(sensor_data, 90);
-    move_forward(sensor_data, 150);
-}
-
-void bumpRight(oi_t *sensor_data) {
-
-    move_forward(sensor_data, -150);
-    turn_left(sensor_data, 90);
-    move_forward(sensor_data, 250);
-    turn_right(sensor_data, 90);
-    move_forward(sensor_data, 150);
-}
-
-
 
 
 void oops(oi_t *sensor_data, int sensor_tripped){

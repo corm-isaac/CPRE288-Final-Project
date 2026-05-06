@@ -6,6 +6,7 @@
 
 #include "song.h"
 #include "uart-interrupt.h"
+#include "open_interface.h"
 
 #define OI_OPCODE_SONG 140
 #define OI_OPCODE_PLAY 141
@@ -13,12 +14,12 @@
 void load_song_to_bot(int song_index, int num_notes, unsigned char *notes, unsigned char *duration)
 {
     int i;
-    uart_sendChar4(OI_OPCODE_SONG);
-    uart_sendChar4(song_index);
-    uart_sendChar4(num_notes);
+    oi_uartSendChar(OI_OPCODE_SONG);
+    oi_uartSendChar(song_index);
+    oi_uartSendChar(num_notes);
     for (i = 0; i < num_notes; i++) {
-        uart_sendChar4(notes[i]);
-        uart_sendChar4(duration[i]);
+        oi_uartSendChar(notes[i]);
+        oi_uartSendChar(duration[i]);
     }
 }
 
@@ -41,6 +42,7 @@ void load_songs()
 
 void play_song(int index)
 {
-    uart_sendChar4(OI_OPCODE_PLAY);
-    uart_sendChar4(index);
+    oi_uartSendChar(OI_OPCODE_PLAY);
+    oi_uartSendChar(index);
 }
+
