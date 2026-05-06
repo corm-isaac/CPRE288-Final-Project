@@ -8,6 +8,7 @@
 
 #include "imu.h"
 #include "timer.h"
+#include  "lcd.h"
 
 
 void imu_init() {
@@ -26,7 +27,7 @@ void imu_init() {
 
     GPIO_PORTB_DATA_R |= 0X40;
 
-    timer_waitMillis(500);
+    timer_waitMillis(650);
 
     ///Now do some writes to IMU
     imu_write_command(0x3E, 0x00); //PWR_MODE --> NORMAL
@@ -36,7 +37,8 @@ void imu_init() {
     imu_write_command(0x41, 0x21); //AXIS_REMAP_CONFIG --> See datasheet
     imu_write_command(0x42, 0x4); //AXIS_REMAP_SIGN --> invert X
 
-    imu_write_command(0x3D, 0x0C); //OPR_MODE --> NDOF [Nine Degrees of Freedom]
+    timer_waitMillis(50);
+    imu_write_command(0x3D, 0x0C); //OPR_MODE --> NDOF [Nine Degrees of Freedom] ((DEFAULT))
 
 
 
@@ -53,12 +55,43 @@ void imu_write_command(char address, char data) {
     i2c_send_bytes(command, 2);
 }
 
+//Gets Heading of whatever degree we are in.
 float imu_get_heading_deg() {
     //should be in NDOF
     uint8_t data[2];
     i2c_imu_read_registers(data, 2, 0x1A);
 
     return ((float)data[0] + (float)(data[1] << 8)) / 16.0f;
+}
+
+//Set OPR to COMPASS Mode and check calibration
+void imu_set_compass_mode() {
+    imu_write_command(0x3D, 0x09); //OPR_MODE --> COMPASS
+    uint8_t status = i2c_imu_read_register(0x35); //CALIB_STAT
+     while((status & 0xFF) != 0xFF) {
+             status = i2c_imu_read_register(0x35); //CALIB_STAT
+             short acc_stat = ((status & 0b1100) == 0b1100);
+             short gyro_stat = ((status & 0b110000) == 0b110000);
+             short mag_stat = ((status & 0b11) == 0b11);
+             short sys_stat = ((status & 0b11000000) == 0b11000000);
+             lcd_printf("Calibration Status:\nACC: %s\nGYRO: %s\nMAG: %6s S:%s", acc_stat ? "OK" : "NOT OK", gyro_stat ? "OK" : "NOT OK", mag_stat ? "OK" : "NOT OK", sys_stat ? "OK" : "NOTOK");
+             timer_waitMillis(1500);
+         }
+}
+
+//Set OPR to NDOF Mode and check calibration
+void imu_set_ndof_mode() {
+    imu_write_command(0x3D, 0x0C); //OPR_MODE --> NDOF [Nine Degrees of Freedom]
+    uint8_t status = i2c_imu_read_register(0x35); //CALIB_STAT
+    while((status & 0xFF) != 0xFF) {
+            status = i2c_imu_read_register(0x35); //CALIB_STAT
+            short acc_stat = ((status & 0b1100) == 0b1100);
+            short gyro_stat = ((status & 0b110000) == 0b110000);
+            short mag_stat = ((status & 0b11) == 0b11);
+            short sys_stat = ((status & 0b11000000) == 0b11000000);
+            lcd_printf("Calibration Status:\nACC: %s\nGYRO: %s\nMAG: %6s S:%s", acc_stat ? "OK" : "NOT OK", gyro_stat ? "OK" : "NOT OK", mag_stat ? "OK" : "NOT OK", sys_stat ? "OK" : "NOTOK");
+            timer_waitMillis(1500);
+        }
 }
 
 
