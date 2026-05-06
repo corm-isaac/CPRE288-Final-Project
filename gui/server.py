@@ -134,7 +134,7 @@ def receiver_loop():
 
             # --- UNKNOWN ---
             else:
-                print("[UNKNOWN]", line)
+                print("[UNKNOWN]2", line)
 
     except Exception as e:
         print("[ERROR] Receiver crashed:", e)
@@ -198,7 +198,7 @@ def handle_command(data):
     cmd = data["cmd"]
 
     try:
-        py2bot(fobj, cmd + "\n")
+        py2bot(fobj, cmd)
     except Exception as e:
         print("[ERROR] Failed to send command:", e)
         return
