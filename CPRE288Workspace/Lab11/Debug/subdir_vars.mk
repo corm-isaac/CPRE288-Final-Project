@@ -13,6 +13,8 @@ C_SRCS += \
 ../adc.c \
 ../boundary.c \
 ../button.c \
+../i2c.c \
+../imu.c \
 ../lcd.c \
 ../logMessage.c \
 ../main.c \
@@ -33,6 +35,8 @@ C_DEPS += \
 ./adc.d \
 ./boundary.d \
 ./button.d \
+./i2c.d \
+./imu.d \
 ./lcd.d \
 ./logMessage.d \
 ./main.d \
@@ -53,6 +57,8 @@ OBJS += \
 ./adc.obj \
 ./boundary.obj \
 ./button.obj \
+./i2c.obj \
+./imu.obj \
 ./lcd.obj \
 ./logMessage.obj \
 ./main.obj \
@@ -73,6 +79,8 @@ OBJS__QUOTED += \
 "adc.obj" \
 "boundary.obj" \
 "button.obj" \
+"i2c.obj" \
+"imu.obj" \
 "lcd.obj" \
 "logMessage.obj" \
 "main.obj" \
@@ -93,6 +101,8 @@ C_DEPS__QUOTED += \
 "adc.d" \
 "boundary.d" \
 "button.d" \
+"i2c.d" \
+"imu.d" \
 "lcd.d" \
 "logMessage.d" \
 "main.d" \
@@ -113,6 +123,8 @@ C_SRCS__QUOTED += \
 "../adc.c" \
 "../boundary.c" \
 "../button.c" \
+"../i2c.c" \
+"../imu.c" \
 "../lcd.c" \
 "../logMessage.c" \
 "../main.c" \

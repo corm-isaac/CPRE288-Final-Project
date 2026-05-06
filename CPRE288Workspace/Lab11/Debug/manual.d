@@ -36,6 +36,8 @@ manual.obj: ../servo.h
 manual.obj: ../logMessage.h
 manual.obj: ../boundary.h
 manual.obj: ../song.h
+manual.obj: ../imu.h
+manual.obj: ../i2c.h
 
 ../manual.c:
 
@@ -108,4 +110,8 @@ C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_limits.h
 ../boundary.h:
 
 ../song.h:
+
+../imu.h:
+
+../i2c.h:
 

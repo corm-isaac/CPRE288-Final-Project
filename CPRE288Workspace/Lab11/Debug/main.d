@@ -36,6 +36,8 @@ main.obj: ../logMessage.h
 main.obj: ../boundary.h
 main.obj: ../manual.h
 main.obj: ../song.h
+main.obj: ../i2c.h
+main.obj: ../imu.h
 
 ../main.c:
 
@@ -108,4 +110,8 @@ C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h:
 ../manual.h:
 
 ../song.h:
+
+../i2c.h:
+
+../imu.h:
 

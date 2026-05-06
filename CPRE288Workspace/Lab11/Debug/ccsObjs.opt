@@ -2,6 +2,8 @@
 "./adc.obj"
 "./boundary.obj"
 "./button.obj"
+"./i2c.obj"
+"./imu.obj"
 "./lcd.obj"
 "./logMessage.obj"
 "./main.obj"

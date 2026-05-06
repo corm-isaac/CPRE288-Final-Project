@@ -1,9 +1,9 @@
 /**
  * lab5_template.c
  *
- * Template file for CprE 288 Lab 5
+ * Template file for CprE 288 Lab Project
  *
- * @author Zhao Zhang, Chad Nelson, Zachary Glanz
+ * @author Cooper Sanders, Michael Farmer, Mila Haynes, Isaac Cormier
  * @date 08/14/2016
  *
  * @author Phillip Jones, updated 6/4/2019
@@ -27,6 +27,8 @@
 #include "boundary.h"
 #include "manual.h"
 #include "song.h"
+#include "i2c.h"
+#include "imu.h"
 
 int main (void)
 {
@@ -38,12 +40,21 @@ int main (void)
     uart_interrupt_init();
     ping_init();
     servo_init();
-    load_songs();
+    //load_songs();
+    imu_init();
+    imu_set_ndof_mode(false);
+    lcd_printf("init done");
+
 
     oi_t *sensor_data = oi_alloc();
     oi_init(sensor_data);
 
     lcd_clear();
+
+    ///timer_waitMillis(250);
+    ///imu_set_compass_mode(true); //preloads heading register with compass value
+    ///timer_waitMillis(500);
+    imu_set_ndof_mode(true); //then back to relative
 
     //uart_sendStr("Press any key to start program: \r\n");
     command_byte = 'n';

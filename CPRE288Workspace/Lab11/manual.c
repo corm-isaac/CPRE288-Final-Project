@@ -22,7 +22,8 @@
 #include "logMessage.h"
 #include "boundary.h"
 #include "song.h"
-//#include "imu.h"
+#include "imu.h"
+#include "i2c.h"
 
 //ScanPoint scanPointArray[90];
 
@@ -41,7 +42,7 @@ void man_drive(oi_t *sensor_data){
     uart_sendStr("Wait - 'n' \r\n");
 
 */
-
+    setup_imu_timer('u');
 
     command_byte = 'n';
     char exit_char = 0;
@@ -106,6 +107,12 @@ void man_drive(oi_t *sensor_data){
                 play_song(1);
                 command_byte = 'n';
                 break;
+
+            case 'u': //IMU get heading
+                logMessage(30, "\r\nANGLE:%.2f\r\n", imu_get_heading_deg()); //send imu angle over
+                command_byte = 'n';
+                break;
+
 
             case 'e': //exit
                 exit_char = 1;
