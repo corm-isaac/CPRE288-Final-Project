@@ -27,6 +27,8 @@
 #include "boundary.h"
 #include "manual.h"
 #include "song.h"
+#include "imu.h"
+#include "i2c.h"
 
 int main (void)
 {
@@ -38,6 +40,10 @@ int main (void)
     uart_interrupt_init();
     ping_init();
     servo_init();
+    imu_init();
+    imu_set_ndof_mode(false);
+    lcd_printf("init done");
+
 
 
     oi_t *sensor_data = oi_alloc();

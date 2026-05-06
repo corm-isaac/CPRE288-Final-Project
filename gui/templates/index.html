@@ -439,6 +439,7 @@ document.addEventListener("keydown", e => {
   if (e.key === 'a' || e.key === 'A') startMove('a');
   if (e.key === 's' || e.key === 'S') startMove('s');
   if (e.key === 'd' || e.key === 'D') startMove('d');
+  if (e.key === 'u' || e.key === 'U') send('u');
 });
 
 document.addEventListener("keyup", e => {
@@ -493,10 +494,16 @@ socket.on("log", data => {
   console.log("[ROBOT]", data.msg);
 });
 
+socket.on("angle", data => {
+  robot.theta = data.value; //angle in deg
+  updateInfo();
+  draw();
+})
+
 function updateInfo() {
   document.getElementById("info-x").innerText = robot.x.toFixed(2) + " m";
   document.getElementById("info-y").innerText = robot.y.toFixed(2) + " m";
-  document.getElementById("info-theta").innerText = (robot.theta * 180 / Math.PI).toFixed(1) + "°";
+  document.getElementById("info-theta").innerText = robot.theta + "°";
   document.getElementById("info-points").innerText = raw_scan.length;
 }
 

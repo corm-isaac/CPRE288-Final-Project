@@ -18,14 +18,14 @@ song.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/string.
 song.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h
 song.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdio.h
 song.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdarg.h
-song.obj: U:/CPRE288-Final-Project/CPRE288Workspace/Lab11/open_interface.h
+song.obj: C:/Users/mifarmer/2880Final/CPRE288-Final-Project/CPRE288Workspace/Lab11/open_interface.h
 song.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h
 song.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/math.h
 song.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_defs.h
 song.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_limits.h
-song.obj: U:/CPRE288-Final-Project/CPRE288Workspace/Lab11/Timer.h
+song.obj: C:/Users/mifarmer/2880Final/CPRE288-Final-Project/CPRE288Workspace/Lab11/Timer.h
 song.obj: C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/interrupt.h
-song.obj: U:/CPRE288-Final-Project/CPRE288Workspace/Lab11/lcd.h
+song.obj: C:/Users/mifarmer/2880Final/CPRE288-Final-Project/CPRE288Workspace/Lab11/lcd.h
 song.obj: ../uart-interrupt.h
 
 ../song.c:
@@ -64,7 +64,7 @@ C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdio.h:
 
 C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdarg.h:
 
-U:/CPRE288-Final-Project/CPRE288Workspace/Lab11/open_interface.h:
+C:/Users/mifarmer/2880Final/CPRE288-Final-Project/CPRE288Workspace/Lab11/open_interface.h:
 
 C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h:
 
@@ -74,11 +74,11 @@ C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_defs.h:
 
 C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_limits.h:
 
-U:/CPRE288-Final-Project/CPRE288Workspace/Lab11/Timer.h:
+C:/Users/mifarmer/2880Final/CPRE288-Final-Project/CPRE288Workspace/Lab11/Timer.h:
 
 C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/interrupt.h:
 
-U:/CPRE288-Final-Project/CPRE288Workspace/Lab11/lcd.h:
+C:/Users/mifarmer/2880Final/CPRE288-Final-Project/CPRE288Workspace/Lab11/lcd.h:
 
 ../uart-interrupt.h:
 

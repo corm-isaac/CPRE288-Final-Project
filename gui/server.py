@@ -119,6 +119,10 @@ def receiver_loop():
             elif header == "SCAN_END":
                 socketio.emit("scan_end")
 
+            elif header == "ANGLE":
+                socketio.emit("angle", {"value": float(payload)})
+                print(payload)
+
             # --- UNKNOWN ---
             else:
                 print("[UNKNOWN]2", line)
