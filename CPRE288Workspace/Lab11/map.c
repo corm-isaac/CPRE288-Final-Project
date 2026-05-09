@@ -28,5 +28,3 @@ Point determineObjectCoordinates(int objectId) { //determines the coordinates of
 
     return obj;
 }
-
-
