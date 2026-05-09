@@ -1,3 +1,12 @@
+/**
+ * @file index.html
+ *
+ * @brief file that contains all of the code for the website
+ *
+ * @author Cooper Sanders
+ *
+ * @date 4/22/26
+ */
 <!DOCTYPE html>
 <html>
 <head>
@@ -383,9 +392,11 @@
 
 <script>
 const socket = io();
-
+//holds scan data
 let raw_scan = [];
+//hold objects
 let objects = [];
+//not used
 let robot = { x: 0, y: 0, theta: 0 };
 let connected = false;
 
@@ -473,7 +484,7 @@ window.onload = () => {
   draw();
 };
 
-// --- RECEIVE DATA ---
+// --- RECEIVE DATA --- //not used
 socket.on("pose", data => {
   robot = data;
   updateInfo();

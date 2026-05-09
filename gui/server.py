@@ -1,3 +1,10 @@
+'''
+@file server.py
+
+@breif main server code that runs the website and establishes a connection with the bot
+
+@author Cooper Sanders
+'''
 from flask import Flask, render_template
 from flask_socketio import SocketIO
 import threading, math
@@ -49,7 +56,7 @@ def receiver_loop():
     try:
         while receiver_running:
             line = bot2py(fobj)
-            line = line.replace("\x00", "").replace("\r", "").strip()
+            line = line.replace("\x00", "").replace("\r", "").strip() # remove  weird data from the bot
 
             if ":" not in line:
                 print("[LOG]", line)
@@ -86,7 +93,6 @@ def receiver_loop():
                     #computed_width = 2 * dist_m * math.sin(delta_theta / 2)
 
                     width = 2 * dist_m * math.sin((end - start) * 3.141592 / (360.0))
-
                     print(
                         f"[OBJECT] id={obj_id} "
                         f"midpoint={mid}"
@@ -135,6 +141,7 @@ def receiver_loop():
     receiver_running = False
     socketio.emit("status", {"connected": False})
 
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -143,6 +150,7 @@ def index():
 def handle_connect():
     threading.Thread(target=connect_robot, daemon=True).start()
 
+#get a command from the gui and send it to the bot
 @socketio.on("command")
 def handle_command(data):
 
