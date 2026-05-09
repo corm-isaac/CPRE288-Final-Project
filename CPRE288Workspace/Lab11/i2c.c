@@ -1,13 +1,18 @@
 /*
- * i2c.c
- *
- *  Created on: Apr 20, 2026
- *      Author: mifarmer
+ * @file i2c.c
+ * @brief Fundamental functions for using I2C with TM4C
+ * @author Michael Farmer
+ * @date 4/18/2026
  */
 #include "i2c.h"
 
 
-//Init TM4C registers and I2C basics
+
+/*
+* Init TM4C registers and I2C basics
+* @author Michael Farmer
+* @date 4/18/2026
+*/
 void i2c_init() {
     SYSCTL_RCGCI2C_R |= 0x2; //I2C1
     SYSCTL_RCGCGPIO_R |= 0x1; //PA
@@ -37,7 +42,12 @@ void i2c_init() {
 
 
 
-
+/*
+* Set internal variable for slave address, and enables non I2C pins for the IMU
+* @author Michael Farmer
+* @param addr The 7-bit address to set I2C communications to
+* @date 4/18/2026
+*/
 void set_slave_address(char addr){
 
     SYSCTL_RCGCGPIO_R |= 0x2; //PB
@@ -54,7 +64,13 @@ void set_slave_address(char addr){
 
 }
 
-//Send single byte, for reading imu registers
+
+/*
+* Send single byte, for reading imu registers, with no STOP
+* @author Michael Farmer
+* @param data The address byte to be sent
+* @date 4/18/2026
+*/
 void i2c_imu_send_addr(char data){
     I2C1_MSA_R &= ~0x1; // 0 for write
 
@@ -71,6 +87,12 @@ void i2c_imu_send_addr(char data){
 
 }
 
+/*
+* Send single byte over I2C
+* @author Michael Farmer
+* @param data The byte to be sent
+* @date 4/18/2026
+*/
 void i2c_send_byte(char data) {
     I2C1_MSA_R &= ~0x1; //0
 
@@ -88,7 +110,12 @@ void i2c_send_byte(char data) {
     I2C1_MCS_R = (I2C1_MCS_R & ~0b10111) | 0b100; //STOP
 }
 
-
+/*
+* Send multiple bytes over I2C
+* @author Michael Farmer
+* @param data The byte array to be sent in order
+* @date 4/18/2026
+*/
 void i2c_send_bytes(char* data, uint8_t num_bytes){
     bool error = false;
 
@@ -151,6 +178,12 @@ void i2c_send_bytes(char* data, uint8_t num_bytes){
 
 }
 
+/*
+* Read a single register of the IMU
+* @author Michael Farmer
+* @param address The address register to read
+* @date 4/18/2026
+*/
 uint8_t i2c_imu_read_register(char address) {
 
     i2c_imu_send_addr(address);
@@ -175,6 +208,15 @@ uint8_t i2c_imu_read_register(char address) {
 
 
 }
+
+/*
+* Read multiple registers
+* @author Michael Farmer
+* @param return_arr The array to be filled with data
+* @param num_bytes The number of sequential bytes to read
+* @param start_addr The first address to read (increases from there) 
+* @date 4/18/2026
+*/
 void i2c_imu_read_registers(uint8_t* return_arr, uint8_t num_bytes, uint8_t start_addr){
 
     i2c_imu_send_addr(start_addr);

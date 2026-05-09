@@ -1,10 +1,9 @@
 /*
- * imu.c
- *
- *  Created on: Apr 22, 2026
- *      Author: mifarmer
+ * @file imu.c
+ * @brief IMU specific functions for for utilizing the IMU
+ * @author Michael Farmer
+ * @date 4/29/2026
  */
-//init
 
 #include "imu.h"
 #include "timer.h"
@@ -16,6 +15,11 @@ extern volatile int command_flag; // flag to tell the main program a special com
 char g_imu_command = 0;
 
 
+/*
+* Init IMU registers themselves, and pulse the reset line
+* @author Michael Farmer
+* @date 4/29/2026
+*/
 void imu_init() {
     i2c_init();
     timer_init(); //required
@@ -51,7 +55,13 @@ void imu_init() {
 
 }
 
-//send a write command to imu
+/*
+* Send a write command to IMU using I2C
+* @author Michael Farmer
+* @param address The IMU address to write to
+* @param data The data byte to write
+* @date 4/29/2026
+*/
 void imu_write_command(char address, char data) {
     char command[2];
     command[0] = address;
@@ -60,7 +70,11 @@ void imu_write_command(char address, char data) {
     i2c_send_bytes(command, 2);
 }
 
-//Gets Heading of whatever degree we are in.
+/*
+* Get current heading in degrees of IMU
+* @author Michael Farmer
+* @date 4/29/2026
+*/
 float imu_get_heading_deg() {
     //should be in NDOF
     uint8_t data[2];
@@ -69,7 +83,13 @@ float imu_get_heading_deg() {
     return ((float)data[0] + (float)(data[1] << 8)) / 16.0f;
 }
 
-//Set OPR to COMPASS Mode and check calibration
+
+/*
+* Set OPR to COMPASS Mode and check calibration
+* @author Michael Farmer
+* @param calibrate_acc Whether to actually calibrate the Accelerometer, as opposed to skipping it
+* @date 4/29/2026
+*/
 void imu_set_compass_mode(bool calibrate_acc) {
     imu_write_command(0x3D, 0x09); //OPR_MODE --> COMPASS
     uint8_t status = i2c_imu_read_register(0x35); //CALIB_STAT
@@ -85,7 +105,12 @@ void imu_set_compass_mode(bool calibrate_acc) {
          }
 }
 
-//Set OPR to NDOF Mode and check calibration
+/*
+* Set OPR to NDOF Mode and check calibration
+* @author Michael Farmer
+* @param calibrate_acc Whether to actually calibrate the Accelerometer, as opposed to skipping it
+* @date 4/29/2026
+*/
 void imu_set_ndof_mode(bool calibrate_acc) {
     imu_write_command(0x3D, 0x0C); //OPR_MODE --> NDOF [Nine Degrees of Freedom]
     uint8_t status = i2c_imu_read_register(0x35); //CALIB_STAT
@@ -101,6 +126,12 @@ void imu_set_ndof_mode(bool calibrate_acc) {
         }
 }
 
+/*
+* Set the TM4C timer to call an interrupt ever 0.3 seconds 
+* @author Michael Farmer
+* @param ch The character to send on interrupt
+* @date 4/29/2026
+*/
 void setup_imu_timer(char ch)
 {
     SYSCTL_RCGCTIMER_R |= 0x010; //enable clock for timer 4
@@ -124,6 +155,11 @@ void setup_imu_timer(char ch)
     TIMER4_CTL_R |= 0x100; //enable timer
 }
 
+/*
+* The Handler called on interrupt. Just sets command byte and flag.
+* @author Michael Farmer
+* @date 4/29/2026
+*/
 void TIMER4B_HANDLER() {
     TIMER4_ICR_R |= 0x800; //clear match interrupt
 

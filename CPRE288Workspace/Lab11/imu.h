@@ -1,8 +1,8 @@
 /*
- * imu.h
- *
- *  Created on: Apr 22, 2026
- *      Author: mifarmer
+ * @file imu.h
+ * @brief IMU specific functions for for utilizing the IMU
+ * @author Michael Farmer
+ * @date 4/29/2026
  */
 
 #ifndef IMU_H_

@@ -1,8 +1,8 @@
 /*
- * i2c.h
- *
- *  Created on: Apr 20, 2026
- *      Author: mifarmer
+ * @file i2c.h
+ * @brief Fundamental functions for using I2C with TM4C
+ * @author Michael Farmer
+ * @date 4/18/2026
  */
 
 #ifndef I2C_H_

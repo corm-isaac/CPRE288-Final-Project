@@ -1,18 +1,9 @@
 /*
-*
-*   uart-interrupt.h
-*
-*   Used to set up the RS232 connector and WIFI module
-*   Uses RX interrupt
-*   Functions for communicating between CyBot and PC via UART1
-*   Serial parameters: Baud = 115200, 8 data bits, 1 stop bit,
-*   no parity, no flow control on COM1, FIFOs disabled on UART1
-*
-*   @author Dane Larson
-*   @date 07/18/2016
-*   Phillip Jones updated 9/2019, removed WiFi.h, Timer.h
-*   Diane Rover updated 2/2020, added interrupt code
-*/
+ * @file song.h
+ * @brief File to load custom songs to the CyBot
+ * @author Michael Farmer
+ * @date 4/14/2026
+ */
 
 #ifndef OI_SONG_H_
 #define OI_SONG_H_
