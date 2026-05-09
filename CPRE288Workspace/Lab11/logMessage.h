@@ -1,17 +1,14 @@
 /*
- * logMessage.h
- *
- *  Created on: Apr 10, 2026
- *      Author: ikcorm
+ * @file logMessage.h
+ * @brief print method to uartStr
+ * @date 04/10/26
+ * @author Isaac Cormier
  */
-
 #ifndef LOGMESSAGE_H_
 #define LOGMESSAGE_H_
 
+void log_message(size_t buf_Size, const char *fmt, ...);
 
-void logMessage(size_t bufSize, const char *fmt, ...);
-
-void logMessage_init(void);
-
+void log_message_init(void);
 
 #endif /* LOGMESSAGE_H_ */
