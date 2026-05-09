@@ -1,12 +1,11 @@
 /*
- * manual.c
+ * @file manual.c
+ * @brief File containing manual movement control
  *
- *  Created on: May 1, 2026
- *      Author: ikcorm
+ * @author Isaac Cormier, Mila Haynes
+ *
+ * @date 05/01/26
  */
-
-// ASSUMMING INTERRUPTS ARE ENABLED IF NOT THE CODE WILL BLOW UP
-
 
 #include "Timer.h"
 #include "lcd.h"
@@ -19,33 +18,19 @@
 #include "ping.h"
 #include "button.h"
 #include "servo.h"
-#include "logMessage.h"
+#include "log_message.h"
 #include "boundary.h"
 #include "song.h"
 #include "imu.h"
 #include "i2c.h"
 
-//#include "imu.h"
-
-//ScanPoint scanPointArray[90];
-
-
-
+/*
+ * Enables and controls manual driving mode.
+ * @author Isaac Cormier, Mila Haynes
+ * @param self The robot sensor data struct
+ * @date 05/01/26
+ */
 void man_drive(oi_t *sensor_data){
-    /*
-    uart_sendStr("Don't Moneyshift the cybot\r\n");
-
-    uart_sendStr("Traverse Forward - 'w' \r\n");
-    uart_sendStr("Traverse Backward - 's' \r\n");
-    uart_sendStr("Traverse Left - 'a' \r\n");
-    uart_sendStr("Traverse Right - 'd' \r\n");
-    uart_sendStr("180 Scan - 'i' \r\n");
-    uart_sendStr("Exit Loop (Hopefully calls oi_free and turns mr robot off - 'e' \r\n"); //call this when done with bot
-    uart_sendStr("Wait - 'n' \r\n");
-
-*/
-
-    setup_imu_timer('u');
 
     command_byte = 'n';
     char exit_char = 0;
@@ -63,62 +48,50 @@ void man_drive(oi_t *sensor_data){
             case 'w': //forward
                 command_flag = 0;
                 command_byte = 'n';
-                move_forward(sensor_data, 100); //10cm
-                //logMessage(15, "Forward 10\r\n");
-
+                move_forward_mm(sensor_data, 100); //10cm
 
                 break;
 
             case 'a': // left
                 command_flag = 0;
                 command_byte = 'n';
-                turn_left(sensor_data, 10);
-                //logMessage(15, "Left 10\r\n");
-
+                turn_left_deg(sensor_data, 10);
 
                 break;
 
             case 's': //back
                 command_flag = 0;
                 command_byte = 'n';
-                move_backward(sensor_data, 100); //10cm
-                //logMessage(15, "Back 10\r\n");
+                move_backward_mm(sensor_data, 100); //10cm
 
                 break;
 
             case 'd': //right
                 command_flag = 0;
                 command_byte = 'n';
-                turn_right(sensor_data, 10);
-                //logMessage(15, "Right 10\r\n");
-
+                turn_right_deg(sensor_data, 10);
 
                 break;
 
-            case 'i':{
+            case 'i':{ //scan
                 command_flag = 0;
                 command_byte = 'n';
-                //logMessage(20, "\r\n180 Scan\r\n");
                 int i;
                 for(i = 0; i < 180; i += 2)
                 {
-                    scanPointArray[i/2].angle = i;
-                    scanPointArray[i/2].IR = IRScan(i);
-                    scanPointArray[i/2].ping = PingScan(i);
+                    scan_point_array[i/2].angle = i;
+                    scan_point_array[i/2].IR = IR_scan(i);
+                    scan_point_array[i/2].ping = ping_scan(i);
                 }
-                //lcd_printf("%d", i);
-                logScan(); //prints ScanPointArray
-                //Finds objects in theory
-                printObjects(objectDetermination());
-
+                log_scan();
+                print_objects(object_determination());
 
                 break;
             }
             case 'p': //update position and angle
                 command_flag = 0;
                 command_byte = 'n';
-                logMessage(60, "\r\nRight 10\r\n");
-
+                log_message(60, "\r\nRight 10\r\n");
 
                 break;
 
@@ -137,7 +110,7 @@ void man_drive(oi_t *sensor_data){
                 break;
 
             case 'u': //IMU get heading
-                logMessage(30, "\r\nANGLE:%.2f\r\n", imu_get_heading_deg()); //send imu angle over
+                //log_message(30, "\r\nANGLE:%.2f\r\n", imu_get_heading_deg()); //send imu angle over
                 command_byte = 'n';
                 break;
 
@@ -146,23 +119,22 @@ void man_drive(oi_t *sensor_data){
                 command_flag = 0;
                 command_byte = 'n';
                 exit_char = 1;
-                //logMessage(80, "\r\nHypothetically I turn the cybot off\r\n");
 
                 break;
+
             case 'n':
-                //logMessage(15, "\r\nWaiting...\r\n");
                 while(command_byte == 'n');
+
                 break;
+
             default:
                 command_flag = 0;
 
-                logMessage(40, "\r\nButton not pressed correctly: %c    %x\r\n", command_byte, command_byte);
+                log_message(40, "\r\nButton not pressed correctly: %c    %x\r\n", command_byte, command_byte);
                 command_byte = 'n';
 
         }
 
-        //lcd_printf("Heading: %f", imu_get_heading_deg());
-        //timer_waitMillis(250);
     }
 }
 

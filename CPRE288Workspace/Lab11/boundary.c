@@ -1,25 +1,25 @@
 /*
- * boundary.c
- *
- *  Created on: Apr 22, 2026
- *      Author: ikcorm
+ * @file boundary.c
+ * @brief Detects floor obstacles including tape boundary and holes.
+ * @author Isaac Cormier, Mila Haynes
+ * @date 04/22/26
  */
 
-// MAJOR MAJOR MAJOR WARNING THIS FUNCTION DOES NOT EXPLICITLY CALL OI UPDATE (SHOULD BE CALLED IN THE PARENT FUNCTION) BECAUSE OF TIME COMPLEXITY ISSUES IN MOVE FORWARD (MOVEMENT)
-
 #include "open_interface.h"
-#include "logMessage.h"
-//Front Left :2019 -Concrete - stupid white tile in overflow: 2814
-//Left Cliff: 1747 - Concrete -stupid white tile in overflow: 2800
-//Front Right: 1652 - Concrete -stupid white tile in overflow: 2778
-//Right Cliff: 964 - Concrete - stupid white tile in overflow: 2794
+#include "log_message.h"
 
-//Front Left :2738 -Tape -using a stupid ruler because of the stupid white tile in overflow: 2950
-//Left Cliff: 2733 - Tape - 2967
-//Front Right: 2700 - Tape - 2927
-//Right Cliff: 2468 - Tape - 2961
+//Average values
+//Front Left: 2019 - Concrete - 2814 (overflow)
+//Left Cliff: 1747 - Concrete - 2800 (overflow)
+//Front Right: 1652 - Concrete - 2778 (overflow)
+//Right Cliff: 964 - Concrete - 2794 (overflow)
 
-//Front Left :16 -Hole
+//Front Left: 2738 - Tape - 2950 (overflow)
+//Left Cliff: 2733 - Tape - 2967 (overflow)
+//Front Right: 2700 - Tape - 2927 (overflow)
+//Right Cliff: 2468 - Tape - 2961 (overflow)
+
+//Front Left: 16 - Hole
 //Left Cliff: 9 - Hole
 //Front Right: 4 - Hole
 //Right Cliff: 1 - Hole
@@ -40,66 +40,96 @@ const uint32_t FRONT_RIGHT_HOLE = 4;
 const uint32_t RIGHT_HOLE = 1;
 
 typedef struct { //oi sensor values 0-4096
-    uint32_t frontLeft;
-    uint32_t frontRight;
+    uint32_t front_left;
+    uint32_t front_right;
     uint32_t right;
     uint32_t left;
 } oi_sensor_val;
 
-
-uint32_t getFrontLeftCliffSensor(oi_t *sensor_data){
+/*Returns Front Left Cliff Sensor value
+ * @author Isaac Cormier, Mila Haynes
+ * @param self The robot sensor data struct
+ * @date 04/22/26
+ */
+uint32_t get_front_left_cliff_sensor(oi_t *sensor_data){
 //    oi_update(sensor_data);
     return (*sensor_data).cliffFrontLeftSignal;
 }
 
-uint32_t getLeftCliffSensor(oi_t *sensor_data){
+/*Returns Left Cliff Sensor value
+ * @author Isaac Cormier, Mila Haynes
+ * @param self The robot sensor data struct
+ * @date 04/22/26
+ */
+uint32_t get_left_cliff_sensor(oi_t *sensor_data){
 //    oi_update(sensor_data);
     return (*sensor_data).cliffLeftSignal;
 }
 
-uint32_t getFrontRightCliffSensor(oi_t *sensor_data){
+/*Returns Front Right Cliff Sensor value
+ * @author Isaac Cormier, Mila Haynes
+ * @param self The robot sensor data struct
+ * @date 04/22/26
+ */
+uint32_t get_front_right_cliff_sensor(oi_t *sensor_data){
 //    oi_update(sensor_data);
     return (*sensor_data).cliffFrontRightSignal;
 }
 
-uint32_t getRightCliffSensor(oi_t *sensor_data){
+/*Returns Right Cliff Sensor value
+ * @author Isaac Cormier, Mila Haynes
+ * @param self The robot sensor data struct
+ * @date 04/22/26
+ */
+uint32_t get_right_cliff_sensor(oi_t *sensor_data){
 //    oi_update(sensor_data);
     return (*sensor_data).cliffRightSignal;
 }
 
-void printValues(oi_t *sensor_data){
-    logMessage(60,"Front Left Cliff Sensor: %u\r\n", (getFrontLeftCliffSensor(sensor_data)));
-    logMessage(60,"Left Cliff Sensor: %u\r\n", (getLeftCliffSensor(sensor_data)));
-    logMessage(60,"Front Right Cliff Sensor: %u\r\n", (getFrontRightCliffSensor(sensor_data)));
-    logMessage(60,"Right Cliff Sensor: %u\r\n", (getRightCliffSensor(sensor_data)));
+/*Prints values of cliff sensor functions
+ * @author Isaac Cormier, Mila Haynes
+ * @param self The robot sensor data struct
+ * @date 04/22/26
+ */
+void print_values(oi_t *sensor_data){
+    logMessage(60,"Front Left Cliff Sensor: %u\r\n", (get_front_left_cliff_sensor(sensor_data)));
+    logMessage(60,"Left Cliff Sensor: %u\r\n", (get_left_cliff_sensor(sensor_data)));
+    logMessage(60,"Front Right Cliff Sensor: %u\r\n", (get_front_right_cliff_sensor(sensor_data)));
+    logMessage(60,"Right Cliff Sensor: %u\r\n", (get_right_cliff_sensor(sensor_data)));
 }
 
-int checkBoundary(oi_t *sensor_data){ //LEFT 1; FRONT LEFT 2 ; FRONT RIGHT 3; RIGHT 4
+/*Checks if CyBot has crossed boundary
+ * @author Isaac Cormier, Mila Haynes
+ * @param self The robot sensor data struct
+ * @date 04/22/26
+ */
+int check_boundary(oi_t *sensor_data){
+    //LEFT 1; FRONT LEFT 2 ; FRONT RIGHT 3; RIGHT 4
 
     int hole_tolerance = 50;
     int tape_tolerance = -80;
 
-    oi_sensor_val dataValues = {0,0,0,0};
+    oi_sensor_val data_values = {0,0,0,0};
 
-    dataValues.frontLeft = getFrontLeftCliffSensor(sensor_data);
-    dataValues.left = getLeftCliffSensor(sensor_data);
-    dataValues.frontRight = getFrontRightCliffSensor(sensor_data);
-    dataValues.right = getRightCliffSensor(sensor_data);
+    data_values.front_left = get_front_left_cliff_sensor(sensor_data);
+    data_values.left = get_left_cliff_sensor(sensor_data);
+    data_values.front_right = get_front_right_cliff_sensor(sensor_data);
+    data_values.right = get_right_cliff_sensor(sensor_data);
 
     //Front Left
-    if (dataValues.frontLeft < (FRONT_LEFT_HOLE +  hole_tolerance) || dataValues.frontLeft > (FRONT_LEFT_TAPE +  tape_tolerance)){
+    if (data_values.front_left < (FRONT_LEFT_HOLE +  hole_tolerance) || data_values.front_left > (FRONT_LEFT_TAPE +  tape_tolerance)){
         return 2;
     }
     //Left
-    else if (dataValues.left < (LEFT_HOLE +  hole_tolerance) || dataValues.left > (LEFT_TAPE +  tape_tolerance)){
+    else if (data_values.left < (LEFT_HOLE +  hole_tolerance) || data_values.left > (LEFT_TAPE +  tape_tolerance)){
         return 1;
     }
     //Front Right
-    else if(dataValues.frontRight < (FRONT_RIGHT_HOLE +  hole_tolerance) || dataValues.frontRight > (FRONT_RIGHT_TAPE +  tape_tolerance)) {
+    else if(data_values.front_right < (FRONT_RIGHT_HOLE +  hole_tolerance) || data_values.front_right > (FRONT_RIGHT_TAPE +  tape_tolerance)) {
         return 3;
     }
     //Right
-    else if (dataValues.right < (RIGHT_HOLE +  hole_tolerance) || dataValues.right > (RIGHT_TAPE +  tape_tolerance)){
+    else if (data_values.right < (RIGHT_HOLE +  hole_tolerance) || data_values.right > (RIGHT_TAPE +  tape_tolerance)){
         return 4;
     }
 

@@ -1,23 +1,24 @@
 /*
- * movement.h
+ * @file movement.h
+ * @brief Header file for movement.c
  *
- *  Created on: Feb 4, 2026
- *      Author: mifarmer
+ * @author Michael Farmer, Isaac Cormier, Mila Haynes, Cooper Sanders
+ *
+ * @date 02/04/2026
  */
+
+#include "movement.h"
+#include "boundary.h"
+#include "log_message.h"
+#include "utility.h"
 #include "open_interface.h"
 
 #ifndef MOVEMENT_H_
 #define MOVEMENT_H_
 
-double move_forward(oi_t *sensor_data, double distance_mm);
-double move_backward(oi_t *sensor_data, double distance_mm);
-double turn_right(oi_t *sensor_data, double degrees);
-double turn_left(oi_t *sensor_data, double degrees);
-void go_around(oi_t *sensor_data, short direction);
-void oops(oi_t *sensor_data, int sensor_tripped);
-float calibrateMovement(oi_t *sensor_data);
-
-
-
+double move_forward_mm(oi_t *sensor_data, double distance_mm);
+double move_backward_mm(oi_t *sensor_data, double distance_mm);
+double turn_right_deg(oi_t *sensor_data, double degrees);
+double turn_left_deg(oi_t *sensor_data, double degrees);
 
 #endif /* MOVEMENT_H_ */
