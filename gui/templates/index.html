@@ -519,7 +519,7 @@ function updateInfo() {
 }
 
 
-
+//draw the polar graph on the website based on the scan and objects
 function drawPolar() {
   const canvas = document.getElementById("polar");
   const ctx = canvas.getContext("2d");
@@ -537,10 +537,10 @@ function drawPolar() {
 
   const cx = w / 2;
   const cy = h * 0.9; // push center down so semicircle fits nicely
-  const maxRadius = Math.min(w * 0.45, h * 0.8);
+  const max_radius = Math.min(w * 0.45, h * 0.8);
 
-  const maxScanRange = 1.5; // meters
-  //const maxScanRange = 150 //cm
+  const max_scan_range = 1.5; // meters
+  //const max_scan_range = 150 //cm
 
   // --- SEMICIRCLE GRID ---
   ctx.strokeStyle = "rgba(59, 130, 246, 0.2)";
@@ -549,7 +549,7 @@ function drawPolar() {
   // Range arcs (semi)
   const rings = 4;
   for (let i = 1; i <= rings; i++) {
-    let r = (i / rings) * maxRadius;
+    let r = (i / rings) * max_radius;
     ctx.beginPath();
     ctx.arc(cx, cy, r, Math.PI, 0); // 180° arc
     ctx.stroke();
@@ -558,8 +558,8 @@ function drawPolar() {
   // Angle lines (0° right → 180° left)
   for (let deg = 0; deg <= 180; deg += 30) {
     let rad = deg * Math.PI / 180;
-    let x = cx + maxRadius * Math.cos(rad);
-    let y = cy - maxRadius * Math.sin(rad);
+    let x = cx + max_radius * Math.cos(rad);
+    let y = cy - max_radius * Math.sin(rad);
 
     ctx.beginPath();
     ctx.moveTo(cx, cy);
@@ -572,9 +572,9 @@ function drawPolar() {
   ctx.font = "bold 12px monospace";
   ctx.textAlign = "center";
 
-  ctx.fillText("0°", cx + maxRadius + 20, cy);
-  ctx.fillText("90°", cx, cy - maxRadius - 10);
-  ctx.fillText("180°", cx - maxRadius - 25, cy);
+  ctx.fillText("0°", cx + max_radius + 20, cy);
+  ctx.fillText("90°", cx, cy - max_radius - 10);
+  ctx.fillText("180°", cx - max_radius - 25, cy);
 
   // --- ROBOT ---
   ctx.fillStyle = "#10b981";
@@ -587,26 +587,26 @@ function drawPolar() {
   ctx.lineWidth = 3;
   ctx.beginPath();
   ctx.moveTo(cx, cy);
-  ctx.lineTo(cx, cy - maxRadius);
+  ctx.lineTo(cx, cy - max_radius);
   ctx.stroke();
 
   objects.forEach(obj => {
-    const angleRad = obj.mid_angle * Math.PI / 180;
+    const angle_rad = obj.mid_angle * Math.PI / 180;
 
     // Distance (cm → pixels)
-    let r = (obj.distance / maxScanRange) * maxRadius;
-    if (r > maxRadius) return;
+    let r = (obj.distance / max_scan_range) * max_radius;
+    if (r > max_radius) return;
 
     // Position
-    const x = cx + r * Math.cos(angleRad);
-    const y = cy - r * Math.sin(angleRad);
+    const x = cx + r * Math.cos(angle_rad);
+    const y = cy - r * Math.sin(angle_rad);
 
     // Convert object width → pixel size
     // width is linear size at that distance
-    let pixelWidth = (obj.width / maxScanRange) * maxRadius;
+    let pixel_width = (obj.width / max_scan_range) * max_radius;
 
     // Prevent invisible or massive blobs
-    let radius = Math.max(3, pixelWidth / 2);
+    let radius = Math.max(3, pixel_width / 2);
 
     // Draw filled circle
     ctx.fillStyle = "rgba(96, 165, 250, 0.5)";
@@ -630,15 +630,15 @@ function drawPolar() {
   ctx.fillStyle = "#22c55e"; // green points
 
   raw_scan.forEach(p => {
-    const angleRad = p.angle * Math.PI / 180;
+    const angle_rad = p.angle * Math.PI / 180;
 
-    // convert cm → same unit as maxScanRange
-    let r = (p.ping / ( maxScanRange * 100 ) ) * maxRadius;
+    // convert cm → same unit as max_scan_range
+    let r = (p.ping / ( max_scan_range * 100 ) ) * max_radius;
 
-    if (r > maxRadius) return;
+    if (r > max_radius) return;
 
-    const x = cx + r * Math.cos(angleRad);
-    const y = cy - r * Math.sin(angleRad);
+    const x = cx + r * Math.cos(angle_rad);
+    const y = cy - r * Math.sin(angle_rad);
 
     ctx.beginPath();
     ctx.arc(x, y, 2, 0, Math.PI * 2);

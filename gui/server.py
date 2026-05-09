@@ -56,7 +56,7 @@ def receiver_loop():
     try:
         while receiver_running:
             line = bot2py(fobj)
-            line = line.replace("\x00", "").replace("\r", "").strip() # remove  weird data from the bot
+            line = line.replace("\x00", "").replace("\r", "").strip() # remove weird whitespace things from the bot
 
             if ":" not in line:
                 print("[LOG]", line)
